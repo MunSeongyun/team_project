@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import Add from './Add';
 import './App.css';
+import {Inventory} from './Inventory.js';
+import Update from './Update'
+import Delete from './Delete'
+import Check from './Check'
+import Start from './Start.js'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/"  element={<Start />}></Route>
+        <Route path="/:page_num/:pages/:start"  element={<Inventory />}></Route>
+        <Route path="/add" element={<Add/>}></Route>
+        <Route path='/update/:id' element={<Update />}> </Route>
+        <Route path='/delete/:id' element={<Delete />}></Route>
+        <Route path='/check/:id' element={<Check />}></Route>
+      </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
