@@ -57,7 +57,7 @@ const Check = () => {
   return (
     <div>
         <h1>{post.title}
-        <div><Link to={`/update/${post.id}`} state={
+        <div><Link to={`/board/update/${post.id}`} state={
             {
                 "id":post.id,
                 "title":post.title,
@@ -70,7 +70,7 @@ const Check = () => {
         ><button id='write' type="button" className="btn btn-dark">글 수정</button></Link>
         
         <Link 
-        to={`/delete/${post.id}`}
+        to={`/board/delete/${post.id}`}
         state={{
           id:post.id
         }}>

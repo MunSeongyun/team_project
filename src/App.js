@@ -13,12 +13,12 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route path="/"  element={<Start />}></Route>
-        <Route path="/:page_num/:pages/:start"  element={<Inventory />}></Route>
-        <Route path="/add" element={<Add/>}></Route>
-        <Route path='/update/:id' element={<Update />}> </Route>
-        <Route path='/delete/:id' element={<Delete />}></Route>
-        <Route path='/check/:id' element={<Check />}></Route>
+        <Route path="/board"  element={<Start />}></Route>
+        <Route path="/board/:page_num/:pages/:start"  element={<Inventory />}></Route>
+        <Route path="/board/add" element={<Add/>}></Route>
+        <Route path='/board/update/:id' element={<Update />}> </Route>
+        <Route path='/board/delete/:id' element={<Delete />}></Route>
+        <Route path='/board/check/:id' element={<Check />}></Route>
       </Routes>
       </BrowserRouter>
     </>

@@ -61,7 +61,7 @@ const Add = () => {
     }).then(
       
       ()=>{
-        navigate("/1/10/0")
+        navigate("/board/1/10/0")
         //window.location.href='/1/10/0'
       }
     ).catch()

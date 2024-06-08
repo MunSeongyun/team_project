@@ -24,7 +24,7 @@ const Inventorys = ({posts,pages,page_num,start,isFromCheck}) => {
       <ListGroup style={{padding:"0"}} className='whole'>
 
       {!isFromCheck&&
-      <div><Link to="/add"><button id='write' type="button" className="btn btn-dark">글 작성</button></Link></div>
+      <div><Link to="/board/add"><button id='write' type="button" className="btn btn-dark">글 작성</button></Link></div>
       }
 
       <ListGroupItem>
@@ -37,7 +37,7 @@ const Inventorys = ({posts,pages,page_num,start,isFromCheck}) => {
       {posts.map((item,index)=>{
         if(index+1>=start && (page_num-1)*pages <= index-(start-1) && page_num*pages > index-(start-1)){
           return (
-          <Link key={item.id} to={`/check/${item.id}`} state={
+          <Link key={item.id} to={`/board/check/${item.id}`} state={
               {
                   "id":item.id,
                   "title":item.title,
@@ -96,7 +96,7 @@ const Inventory = (props) => {
         if(page_num == i){
           return <li key={i} className="page-item"><a className="page-link" ><b>{i}</b></a></li>      
         };
-        return <li key={i} className="page-item"><a className="page-link" href={`/${i}/${pages}/${start}`}>{i}</a></li>    
+        return <li key={i} className="page-item"><a className="page-link" href={`/board/${i}/${pages}/${start}`}>{i}</a></li>    
       })
       }
       </ul></nav>
