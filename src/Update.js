@@ -51,7 +51,7 @@ const Update = () => {
 
     
 
-    fetch(`http://localhost:3000/posts/${inputed.state.id}`,{
+    fetch(`http://localhost:3000/board_posts/${inputed.state.id}`,{
       method:"PUT",
       body:JSON.stringify(post)
     }).then(()=>{

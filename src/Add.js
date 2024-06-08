@@ -45,7 +45,7 @@ const Add = () => {
     }
 
 
-    fetch("http://localhost:3000/posts",{
+    fetch("http://localhost:3000/board_posts",{
       method:"POST",
       body:JSON.stringify(post)
     }).then(()=>{

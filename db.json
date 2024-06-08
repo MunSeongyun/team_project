@@ -1,5 +1,5 @@
 {
-  "comments": [
+  "board_comments": [
     {
       "id": "fac2",
       "content": "2 번째 댓글입니다.",
@@ -29,13 +29,13 @@
       "post_id": "fa3"
     }
   ],
-  "posts": [
+  "board_posts": [
     {
       "id": "fa1",
       "title": "1 번 게시물",
-      "content": "안녕하세요! 이것은 1 번째 게시물입니다.dfdf",
+      "content": "안녕하세요! 이것은 1 번째 게시물입니다.gjhvhjg",
       "author": "사용자1",
-      "timestamp": "2024-6-8 / 19:45:44",
+      "timestamp": "2024-6-8 / 21:59:23",
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
     {
