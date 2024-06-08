@@ -11,31 +11,38 @@ const Check = () => {
 
     const [page,setPage] = useState(1)
     const [pageNum, setPageNum] = useState([])
-
-    
-
-
     const [posts, setPosts] = useState([])
-    useEffect(()=>{
-      fetch("http://localhost:3000/posts",{
-        method:"GET"
-      })
-      .then((response)=>{
-        return response.json()})
-      .then((ans) => {setPosts(ans)
-        return ans.length
-      }).then((a) => {
-        let i = 0
-    for(i = 0; i < posts.length; i++){
-      if(posts[i].id === post.id){
-        
-        break
-      }
-    }
-        setPageNum(Array.from({length:Math.ceil((a-i-1)/5)}, (v,i) => i+1))}).catch()
 
-    },[])
+    useEffect(
+      ()=>{
+
+        fetch("http://localhost:3000/posts",{
+          method:"GET"
+        })
+        .then((response)=>{
+          return response.json()})
+        .then((ans) => {
+          setPosts(ans)
+        })
+        .catch()
+      },[])
     
+      useEffect(()=>{
+        let a = posts.length 
+        let i = 0
+        for(i = 0; i < posts.length; i++){
+          if(posts[i].id === post.id){
+            break
+          }         
+        }
+    
+        setPageNum(Array.from(
+          {length:Math.ceil((a-i-1)/5)}, (v,i) => i+1
+        ))
+        
+
+        },[posts, post.id]
+      )
     
     const onClick = (e) => {
       setPage(Number(e.target.innerHTML))
@@ -49,8 +56,6 @@ const Check = () => {
 
   return (
     <div>
-      
-
         <h1>{post.title}
         <div><Link to={`/update/${post.id}`} state={
             {
@@ -105,6 +110,7 @@ const Check = () => {
         }
         return <li key={i} className="page-item"><a className="page-link" onClick={onClick}>{i}</a></li>    
       })
+      
       }
       </ul></nav>
     </div>
