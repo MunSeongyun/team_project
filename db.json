@@ -1,13 +1,6 @@
 {
   "comments": [
     {
-      "id": "fac1",
-      "content": "1 번째 댓글입니다.",
-      "author": "사용자1",
-      "timestamp": "2024-05-30 / 10:00:00",
-      "post_id": "fa1"
-    },
-    {
       "id": "fac2",
       "content": "2 번째 댓글입니다.",
       "author": "사용자2",
@@ -20,16 +13,14 @@
       "author": "사용자3",
       "timestamp": "2024-05-30 / 10:00:00",
       "post_id": "fa2"
-    }
-    ,
+    },
     {
       "id": "fac4",
       "content": "4 번째 댓글입니다.",
       "author": "사용자4",
       "timestamp": "2024-05-30 / 10:00:00",
       "post_id": "fa2"
-    }
-    ,
+    },
     {
       "id": "fac5",
       "content": "5 번째 댓글입니다.",
@@ -42,9 +33,9 @@
     {
       "id": "fa1",
       "title": "1 번 게시물",
-      "content": "안녕하세요! 이것은 1 번째 게시물입니다.",
+      "content": "안녕하세요! 이것은 1 번째 게시물입니다.dfdf",
       "author": "사용자1",
-      "timestamp": "2024-05-30 / 08:51:15",
+      "timestamp": "2024-6-8 / 19:45:44",
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
     {
@@ -76,8 +67,8 @@
       "title": "5 번 게시물",
       "content": "안녕하세요! 이것은 5 번째 게시물입니다.",
       "author": "사용자5",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
+      "timestamp": "2024-6-6 / 11:34:36",
+      "img": "https://cdn.pixabay.com/photo/2024/03/02/13/05/orange-parrots-8608540_1280.jpg"
     },
     {
       "id": "fa6",

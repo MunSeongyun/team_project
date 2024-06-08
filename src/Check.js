@@ -34,7 +34,7 @@ const Check = () => {
     }
         setPageNum(Array.from({length:Math.ceil((a-i-1)/5)}, (v,i) => i+1))}).catch()
 
-    })
+    },[])
     
     
     const onClick = (e) => {
