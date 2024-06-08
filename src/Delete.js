@@ -8,7 +8,7 @@ const Delete = () => {
     
 
     
-    fetch(`http://localhost:3000/posts/${id.state.id}`,
+    fetch(`http://localhost:3000/board_posts/${id.state.id}`,
         {   
             method:"DELETE"
         }

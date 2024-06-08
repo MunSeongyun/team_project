@@ -39,7 +39,7 @@ const CommentUpdate = ({post_id, c_id, func, render}) => {
             post_id:post_id
         }
 
-        fetch(`http://localhost:3000/comments/${c_id}`,{
+        fetch(`http://localhost:3000/board_comments/${c_id}`,{
         method:"PUT",
         body:JSON.stringify(post)
         }).then(()=>{
@@ -74,7 +74,7 @@ const Comment = () => {
     })
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/comments?post_id=${post_id}`,{
+        fetch(`http://localhost:3000/board_comments?post_id=${post_id}`,{
         method:"GET"
         }).then((res)=>res.json())
         .then((res)=>setComments(res))
@@ -99,7 +99,7 @@ const Comment = () => {
             post_id:post_id
         }
 
-        fetch("http://localhost:3000/comments",{
+        fetch("http://localhost:3000/board_comments",{
         method:"POST",
         body:JSON.stringify(post)
         }).then(()=>{
@@ -151,7 +151,7 @@ const Comment = () => {
             id.push(cid[i])
         }
         cid = id.join('')
-        fetch(`http://localhost:3000/comments/${cid}`,
+        fetch(`http://localhost:3000/board_comments/${cid}`,
         {   
             method:"DELETE"
         }
