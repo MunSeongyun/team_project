@@ -81,7 +81,7 @@ const Inventory = (props) => {
       return ans.length
     })
     .then((a) => {setPageNum(Array.from({length:Math.ceil((a-start)/pages)}, (v,i) => i+1))})
-    .catch()})
+    .catch()},[])
 
     
 
