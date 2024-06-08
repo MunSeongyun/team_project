@@ -73,7 +73,7 @@ const Inventory = (props) => {
     const [pageNum, setPageNum] = useState([])
 
     useEffect(()=>{
-      fetch("http://localhost:3000/board_posts",{
+      fetch("http://localhost:5000/board_posts",{
       method:"GET"
     })
     .then((response)=>{return response.json()})
