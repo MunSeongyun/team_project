@@ -1,6 +1,6 @@
 import React from 'react'
 import {  useLocation, useNavigate } from 'react-router-dom'
-
+import '../css/Board_App.css';
 const Delete = () => {
 
   const navigate = useNavigate();

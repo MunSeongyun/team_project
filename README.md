@@ -1,6 +1,3 @@
-# 게시판 구현 했습니다.
-## 게시글 CRUD, 댓글 CRUD 구현함
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

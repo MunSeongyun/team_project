@@ -1,19 +1,13 @@
 {
+  "users": [
+    {
+      "id": "dfd9",
+      "nickName": "문성윤",
+      "user_id": "a@a.com",
+      "password": "asd123"
+    }
+  ],
   "board_comments": [
-    {
-      "id": "fac2",
-      "content": "2 번째 댓글입니다.",
-      "author": "사용자2",
-      "timestamp": "2024-05-30 / 10:00:00",
-      "post_id": "fa2"
-    },
-    {
-      "id": "fac3",
-      "content": "3 번째 댓글입니다.",
-      "author": "사용자3",
-      "timestamp": "2024-05-30 / 10:00:00",
-      "post_id": "fa2"
-    },
     {
       "id": "fac4",
       "content": "4 번째 댓글입니다.",
@@ -27,41 +21,16 @@
       "author": "사용자5",
       "timestamp": "2024-05-30 / 10:00:00",
       "post_id": "fa3"
+    },
+    {
+      "id": "9e57",
+      "content": "aa",
+      "author": "aa",
+      "timestamp": "2024-6-8 / 23:3:10",
+      "post_id": "ad70"
     }
   ],
   "board_posts": [
-    {
-      "id": "fa1",
-      "title": "1 번 게시물",
-      "content": "안녕하세요! 이것은 1 번째 게시물입니다.gjhvhjg",
-      "author": "사용자1",
-      "timestamp": "2024-6-8 / 21:59:23",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
-      "id": "fa2",
-      "title": "2 번 게시물",
-      "content": "안녕하세요! 이것은 2 번째 게시물입니다.",
-      "author": "사용자2",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
-      "id": "fa3",
-      "title": "3 번 게시물",
-      "content": "안녕하세요! 이것은 3 번째 게시물입니다.",
-      "author": "사용자3",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
-      "id": "fa4",
-      "title": "4 번 게시물",
-      "content": "안녕하세요! 이것은 4 번째 게시물입니다.",
-      "author": "사용자4",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
     {
       "id": "fa5",
       "title": "5 번 게시물",
@@ -79,30 +48,6 @@
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
     {
-      "id": "fa7",
-      "title": "7 번 게시물",
-      "content": "안녕하세요! 이것은 7 번째 게시물입니다.",
-      "author": "사용자7",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
-      "id": "fa8",
-      "title": "8 번 게시물",
-      "content": "안녕하세요! 이것은 8 번째 게시물입니다.",
-      "author": "사용자8",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
-      "id": "fa9",
-      "title": "9 번 게시물",
-      "content": "안녕하세요! 이것은 9 번째 게시물입니다.",
-      "author": "사용자9",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
       "id": "fa10",
       "title": "10 번 게시물",
       "content": "안녕하세요! 이것은 10 번째 게시물입니다.",
@@ -111,19 +56,11 @@
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
     {
-      "id": "fa11",
-      "title": "11 번 게시물",
-      "content": "안녕하세요! 이것은 11 번째 게시물입니다.",
-      "author": "사용자11",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
       "id": "fa12",
-      "title": "12 번 게시물",
+      "title": "12 번 게시물fd",
       "content": "안녕하세요! 이것은 12 번째 게시물입니다.",
       "author": "사용자12",
-      "timestamp": "2024-05-30 / 08:51:15",
+      "timestamp": "2024-6-10 / 12:15:18",
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
     {
@@ -139,14 +76,6 @@
       "title": "14 번 게시물",
       "content": "안녕하세요! 이것은 14 번째 게시물입니다.",
       "author": "사용자14",
-      "timestamp": "2024-05-30 / 08:51:15",
-      "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
-      "id": "fa15",
-      "title": "15 번 게시물",
-      "content": "안녕하세요! 이것은 15 번째 게시물입니다.",
-      "author": "사용자15",
       "timestamp": "2024-05-30 / 08:51:15",
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
@@ -823,20 +752,120 @@
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
     {
-      "id": "fbc1",
-      "title": "100",
-      "content": "왕 우주당",
-      "author": "사용자100",
-      "timestamp": "2024-6-8 / 22:20:33",
-      "img": "https://cdn.pixabay.com/photo/2020/03/19/12/16/jellyfish-4947355_1280.jpg"
+      "id": "7dda",
+      "title": "asd",
+      "content": "asd",
+      "author": "dasd",
+      "timestamp": "2024-6-8 / 23:5:25",
+      "img": "asd"
+    }
+  ],
+  "member_posts": [
+    {
+      "id": "1",
+      "description": "진모 본문",
+      "author": "구진모",
+      "title": "구진모 타이틀",
+      "image": "https://cdn.deview.co.jp/imgs/pc/articles/1133/01_fumiya.jpg?1649907993",
+      "descriptionImage": "https://cdn.deview.co.jp/imgs/pc/articles/1133/01_fumiya.jpg?1649907993"
     },
     {
-      "id": "01c9",
-      "title": "해파리 너무 좋아",
-      "content": "너무 멋있당",
-      "author": "해파리당",
-      "timestamp": "2024-6-8 / 22:21:7",
-      "img": "https://media.istockphoto.com/id/1033700106/ko/%EC%82%AC%EC%A7%84/%ED%95%B4%ED%8C%8C%EB%A6%AC%EC%9D%98-3d-%EA%B7%B8%EB%A6%BC-%EB%B0%B0%EA%B2%BD%EC%9E%85%EB%8B%88%EB%8B%A4-%ED%95%B4%ED%8C%8C%EB%A6%AC-%EB%B0%94%EB%8B%A4-%EB%B0%94%EB%8B%A4%EC%97%90%EC%84%9C-%EC%88%98%EC%98%81-%EB%B9%9B-%EB%AC%BC-%EB%B3%BC%EB%A5%A8-%EA%B4%91%EC%84%A0%EC%9D%98-%ED%9A%A8%EA%B3%BC-%EB%A7%8C%EB%93%A4%EC%96%B4-%ED%86%B5%EA%B3%BC-%EC%9C%84%ED%97%98%ED%95%9C-%EB%B8%94%EB%A3%A8-%ED%95%B4%ED%8C%8C%EB%A6%AC.jpg?s=2048x2048&w=is&k=20&c=muH3K0O6oKhwed6BfLFD8uMlPQTZeN7QSRzOcjZO_IU="
+      "id": "2",
+      "description": "성윤 본문",
+      "author": "문성윤",
+      "title": "문성윤 타이틀",
+      "image": "https://news.nifty.com/cms_image/news/entame/12138-1988727/thumb-12138-1988727-entame.jpg?_202211221042",
+      "descriptionImage": "https://cdn.deview.co.jp/imgs/pc/articles/1133/01_fumiya.jpg?1649907993"
+    },
+    {
+      "id": "3",
+      "description": "형선 본문",
+      "author": "김형선",
+      "title": "김형선 타이틀",
+      "image": "https://img-mdpr.freetls.fastly.net/article/KXzw/nm/KXzwawna49EWqZ_pRveDVw3sA9CQcLKl00sNzBSvM5g.jpg",
+      "descriptionImage": "https://cdn.deview.co.jp/imgs/pc/articles/1133/01_fumiya.jpg?1649907993"
+    },
+    {
+      "id": "4",
+      "description": "완덕 본문",
+      "author": "김완덕",
+      "title": "김완덕 타이틀",
+      "image": "https://img-mdpr.freetls.fastly.net/article/SLqz/nm/SLqzMif-xp-GejTV51sgB4kBjvuodG3pxH0DPd84VZw.jpg?width=750&disable=upscale&auto=webp&quality=80",
+      "descriptionImage": "https://cdn.deview.co.jp/imgs/pc/articles/1133/01_fumiya.jpg?1649907993"
+    },
+    {
+      "id": "5",
+      "description": "지은 본문",
+      "author": "박지은",
+      "title": "박지은 타이틀",
+      "image": "https://contents.oricon.co.jp/special/img/66000/66000/thumb/img1200/1702452530840.jpg",
+      "descriptionImage": "https://cdn.deview.co.jp/imgs/pc/articles/1133/01_fumiya.jpg?1649907993"
+    },
+    {
+      "id": "6",
+      "description": "대겸 본문",
+      "author": "김대겸",
+      "title": "김대겸 타이틀",
+      "image": "https://ranking.xgoo.jp/tool/images/talent/2000066611.jpg",
+      "descriptionImage": "https://cdn.deview.co.jp/imgs/pc/articles/1133/01_fumiya.jpg?1649907993"
+    }
+  ],
+  "member_comments": [
+    {
+      "id": "0f4c",
+      "name": "테스트 1 Uㄹㄹㄹㄹss",
+      "description": "테스트 1 ㄹㄹㄹss",
+      "timestamp": "2024-6-8 / 23:13:46",
+      "postId": "2"
+    },
+    {
+      "id": "e679",
+      "name": "테스트 1 ㄴ",
+      "description": "테스트 1 ㄴ",
+      "timestamp": "2024-6-7 / 15:19:40",
+      "postId": "4"
+    },
+    {
+      "id": "5ef1",
+      "name": "테스트 1 ",
+      "description": "테스트 1 ",
+      "timestamp": "2024-6-7 / 15:21:21",
+      "postId": "5"
+    },
+    {
+      "id": "a339",
+      "name": "ㅁㄴㅇㅁㄴㅇ",
+      "description": "ㄴㅁㅇㅁㄴㅇ",
+      "timestamp": "2024-6-5 / 20:54:10",
+      "postId": "6"
+    },
+    {
+      "id": "1948",
+      "name": "ASDFF",
+      "description": "ASDFF",
+      "timestamp": "2024-6-7 / 11:2:45",
+      "postId": "5"
+    },
+    {
+      "id": "6c76",
+      "name": "ㄴㅇㄹㅌㅌㅊㅊ",
+      "description": "ㅁㄴㅇㅌㅌㅊㅊ",
+      "timestamp": "2024-6-7 / 15:53:6",
+      "postId": "3"
+    },
+    {
+      "id": "b5af",
+      "name": "ㅁㄴㅇㅌㅌㅊㅊㅇㅇㄴㄴㄴㄴ",
+      "description": "ㅁㄴㅇㅌㅌㅊㅊㅇㅇㄴㄴㄴㄴ",
+      "timestamp": "2024-6-7 / 16:14:57",
+      "postId": "4"
+    },
+    {
+      "id": "6e93",
+      "name": "asd",
+      "description": "asd",
+      "timestamp": "2024-6-8 / 23:13:34",
+      "postId": "5"
     }
   ]
 }

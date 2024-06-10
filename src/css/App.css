@@ -1,0 +1,126 @@
+/* 메인홈페이지 css */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Main-image1 {
+  display: inline-block;
+  margin-left: auto;
+  padding-left: auto;
+}
+
+.Main-image2 {
+  display: inline-block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+
+.Main-image3 {
+  display: inline-block;
+  margin-right: auto;
+  padding-right: auto;
+}
+
+.Main-text1 {
+  position: absolute;
+  height: 400px;
+  left: 51.11%;
+  right: 5.56%;
+  top: 621px;
+  border-radius: 8px;
+  }
+
+.Main-text2 {
+  position: absolute;
+  height: 400px;
+  left: 5.56%;
+  right: 51.04%;
+  top: 1141px;
+  
+  border-radius: 8px;
+  }
+
+.Main-text3 {
+position: absolute;
+height: 400px;
+left: 51.11%;
+right: 5.56%;
+top: 1649px;
+
+border-radius: 8px;
+}
+/* 메인홈페이지 css */
+
+/* 게시판 css */
+.id{
+  display: inline-block;
+  width: 5%;
+  text-align: center;
+}
+.author{
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+}
+.title{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+.time{
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+.whole{
+  padding: 30px;
+  min-width: 500px;
+}
+#write{
+  margin-bottom: 10px;
+  float: right;
+}
+.page-link{
+  color: gray;
+}
+
+ul{
+  padding: 30px;
+}
+/* 게시판 css */
