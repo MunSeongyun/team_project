@@ -1,35 +1,40 @@
-.id{
+.id {
     display: inline-block;
     width: 5%;
     text-align: center;
 }
-.author{
+
+.author {
     display: inline-block;
     width: 15%;
     text-align: center;
 }
-.title{
+
+.title {
     display: inline-block;
     width: 50%;
     text-align: center;
 }
-.time{
+
+.time {
     display: inline-block;
     width: 30%;
     text-align: right;
 }
-.whole{
-    padding: 30px;
+
+.whole {
     min-width: 500px;
 }
-#write{
+
+#write {
     margin-bottom: 10px;
     float: right;
 }
-.page-link{
+
+.page-link {
     color: gray;
 }
 
-ul{
+ul {
     padding: 30px;
 }

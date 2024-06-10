@@ -1,6 +1,11 @@
 /* Projects */
 
-/* Auto layout */
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .intro_flex_container {
     display: flex;
     flex-direction: row;
@@ -113,11 +118,11 @@
     color: #000000;
 }
 
-.updateBtn{
+.updateBtn {
     text-align: center;
 }
 
-.icon{
+.icon {
     /* content:"\f138"; */
     font-family: bootstrap-icons;
     color: red;
