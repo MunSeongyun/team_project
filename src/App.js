@@ -25,6 +25,7 @@ import Hyji from './pages/semester/HyJi.jsx'
 import Hyjiupdate from './pages/semester/Hyjiupdate.jsx'
 
 function App() {
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {
