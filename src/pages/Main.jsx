@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
-import '../css/App.css';
+// import '../css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import oneJo from '../image/화목한 1조.jpg';
 
@@ -38,7 +38,7 @@ const Main = () => {
             <Card.Body>
               <Card.Title style={{ fontWeight: 'bold' }}>현지학기제</Card.Title>
               <Card.Text>일본반의 현지학기제란?</Card.Text>
-              <Button href="/HyJi" variant="dark">자세히 보기</Button>
+              <Button href="/hyji" variant="dark">자세히 보기</Button>
             </Card.Body>
           </Card>
         </div>

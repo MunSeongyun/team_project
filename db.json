@@ -1,4 +1,12 @@
 {
+  "hyenji": [
+    {
+      "id": "1c9d",
+      "name": " 도쿄",
+      "imag": "https://cdn.pixabay.com/photo/2019/07/14/08/08/night-4336403_1280.jpg",
+      "info": "도쿄의 거리일까\n"
+    }
+  ],
   "users": [
     {
       "id": "dfd9",
@@ -17,6 +25,12 @@
       "nickName": "차용두",
       "user_id": "ckdyden@naver.com",
       "password": "ckdyden123"
+    },
+    {
+      "id": "4f2b",
+      "nickName": "김형선",
+      "user_id": "gudtjs1004sd@naver.com",
+      "password": "gudtjs219"
     }
   ],
   "board_comments": [

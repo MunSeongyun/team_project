@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavbarBs from "./components/bootstrap/NavbarBs";
 import Footer from "./components/bootstrap/underBar.jsx";
 import Main from "./pages/Main.jsx";
-import HyJi from "./pages/HyJi.jsx";
 import Login from "./pages/Login";
 import Signin from "./pages/Signin";
 
@@ -21,7 +20,12 @@ import Member from './pages/member/components/Home.jsx'
 import MemberDetail from './pages/member/components/Detail.jsx'
 import MemberUpdate from './pages/member/components/Update.jsx'
 
+// 현지학기제 완덕,진모
+import Hyji from './pages/semester/HyJi.jsx'
+import Hyjiupdate from './pages/semester/Hyjiupdate.jsx'
+
 function App() {
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -38,7 +42,6 @@ function App() {
       <NavbarBs user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/HyJi" element={<HyJi />} />
         <Route path="/Login" element={<Login setUser={setUser} />} />
         <Route path="/Signin" element={<Signin />} />
 
@@ -55,6 +58,9 @@ function App() {
         <Route path="/member/detail/:id" element={<MemberDetail />} />
         <Route path="/member/update/:id" element={<MemberUpdate />} />
         
+        {/* 김완덕, 구진모 현지학기제 */}
+        <Route path="/hyji" element={<Hyji />}></Route>
+        <Route path="/hyjiupdate"  element={<Hyjiupdate />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
