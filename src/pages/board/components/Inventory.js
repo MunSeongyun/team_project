@@ -1,8 +1,8 @@
 import { ListGroupItem } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import '../css/Board_App.css';
 const Inventorys = ({posts,pages,page_num,start,isFromCheck}) => {
 
   let i = 0
@@ -65,6 +65,13 @@ const Inventorys = ({posts,pages,page_num,start,isFromCheck}) => {
 }
 
 const Inventory = (props) => {
+
+  const navigate= useNavigate()
+
+  const toMember=()=>{
+    navigate("/member")
+  }
+
   let isFromCheck = false
   let {page_num, pages, start} = useParams();
 
@@ -100,6 +107,11 @@ const Inventory = (props) => {
       })
       }
       </ul></nav>
+      <div style={{textAlign:"left"}} >
+        <button className="btn btn-primary" onClick={toMember}>
+          <i className="bi bi-arrow-left">조원소개로</i>
+        </button>
+      </div>
     </>
   )
 }

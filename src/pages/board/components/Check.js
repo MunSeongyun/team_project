@@ -4,7 +4,7 @@ import {Inventorys} from './Inventory'
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Comment from './Comment';
-
+import '../css/Board_App.css';
 const Check = () => {
 
     const post = useLocation().state

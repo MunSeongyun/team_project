@@ -1,0 +1,14 @@
+/* .inputBox{
+  border: 10px solid;
+  padding: 10px;
+} */
+from > p > input {
+  background-color: rgb(213,223,228);
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+form p:last-child > input{
+  width: 100%;
+}

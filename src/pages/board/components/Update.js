@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
+import '../css/Board_App.css';
 const Update = () => {
 
   const navigate = useNavigate();
