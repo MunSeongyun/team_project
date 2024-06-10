@@ -5,6 +5,18 @@
       "nickName": "문성윤",
       "user_id": "a@a.com",
       "password": "asd123"
+    },
+    {
+      "id": "ed36",
+      "nickName": "설수현",
+      "user_id": "tjftngus@naver.com",
+      "password": "tjftngus123"
+    },
+    {
+      "id": "3833",
+      "nickName": "차용두",
+      "user_id": "ckdyden@naver.com",
+      "password": "ckdyden123"
     }
   ],
   "board_comments": [
