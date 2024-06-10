@@ -1,3 +1,8 @@
+# 수정해야할 부분들
+대겸: 로그인 중복 체크
+성윤: 로그인 시에만 게시글 작성가능, 댓글 및 게시글 작성 페이지 사용자 이름 고정
+형선: 댓글에 로그인된 사용자 이름 표시, 조원소개 수정, 메인 소개글 추가
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
