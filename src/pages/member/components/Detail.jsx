@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation, useParams, Link } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../App.module.css'
 import DetailComments from './DetailComments';
-// 시간 구하기 // submit 했을 때 그 전의 시간이 설정되서 나옴 
-
-
+import Figure from './Figure';
 
 const Detail = () => {
   const params = useParams()
@@ -95,7 +93,8 @@ const Detail = () => {
   }
 
   return (
-    <div>
+    <div className={style.body}>
+      <Figure />
       <div className="container">
         <div className='row'>
           <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2" >

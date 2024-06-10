@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeTimeLine from './HomeTimeLine';
 import styles from "../App.module.css"
 import { useNavigate } from 'react-router-dom';
-
+import Figure from './Figure';
 const Home = () => {
   const navigate = useNavigate()
   // state와 같은 형식으로 
@@ -16,18 +16,17 @@ const Home = () => {
       .then(response => setData(response))
   }, [])
 
-  const toBoard=()=>{
+  const toBoard = () => {
     navigate("/board")
   }
-
   return (
 
-    <div>
-
+    <div className={styles.body}>
+      <Figure />
       <div className={styles.intro_flex_container}>
         {data.map((data) =>
           // 메인 html 필요할지도 
-          <HomeTimeLine
+          <HomeTimeLine 
             key={data.id}
             id={data.id}
             title={data.title}
@@ -36,7 +35,7 @@ const Home = () => {
           />
         )}
       </div>
-      <div style={{textAlign:"right"}} >
+      <div style={{ textAlign: "right" }} >
         <button className="btn btn-primary" onClick={toBoard}>
           게시판으로<i className="bi bi-arrow-right"></i>
         </button>

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // Home에서 받아옴
 const HomeTimeLine = ({ id, title, author, image }) => {
   return (
-    <>
+    <div>
       <div className={styles.card}>
         <Link key={id} to={`/member/detail/${id}`}>
           <img className={styles.TimeLineImage} src={image}></img>
@@ -22,12 +22,9 @@ const HomeTimeLine = ({ id, title, author, image }) => {
               <cite title="Source Title">{title}</cite>
             </figcaption>
           </figure>
-          
-          
         </div>
-        
       </div>
-    </>
+    </div>
   )
 }
 
