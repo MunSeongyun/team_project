@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
-import '../css/App.css';
+// import '../css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import oneJo from '../image/화목한 1조.jpg';
 
