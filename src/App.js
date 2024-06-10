@@ -22,6 +22,7 @@ import MemberDetail from './pages/member/components/Detail.jsx'
 import MemberUpdate from './pages/member/components/Update.jsx'
 
 function App() {
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {

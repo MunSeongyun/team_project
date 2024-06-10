@@ -21,7 +21,7 @@ const Inventorys = ({posts,pages,page_num,start,isFromCheck}) => {
   
   return (
     <>
-      <ListGroup style={{padding:"0"}} className='whole'>
+      <ListGroup style={{padding:"0"}} className='whole' >
 
       {!isFromCheck&&
       <div><Link to="/board/add"><button id='write' type="button" className="btn btn-dark">글 작성</button></Link></div>
