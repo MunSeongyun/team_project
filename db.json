@@ -1,16 +1,10 @@
 {
   "hyenji": [
     {
-      "id": "1c9d",
-      "name": " 도쿄",
-      "imag": "https://cdn.pixabay.com/photo/2019/07/14/08/08/night-4336403_1280.jpg",
-      "info": "도쿄의 거리일까\n"
-    },
-    {
       "id": "esdd",
       "name": " 도쿄",
       "imag": "https://cdn.pixabay.com/photo/2019/07/14/08/08/night-4336403_1280.jpg",
-      "info": "도쿄의 거리일까\n"
+      "info": "도쿄의 거리일까\ndfgdfg"
     }
   ],
   "users": [
@@ -37,6 +31,12 @@
       "nickName": "김형선",
       "user_id": "gudtjs1004sd@naver.com",
       "password": "gudtjs219"
+    },
+    {
+      "id": "02ba",
+      "nickName": "bannotoki",
+      "user_id": "kim9285010@naver.com",
+      "password": "kim010323@!#"
     },
     {
       "id": "fd98",
