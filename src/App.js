@@ -40,7 +40,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavbarBs user={user} setUser={setUser} />
-      <Routes>
+      <div style={{
+        margin: "7% 13% 0% 13%",
+        backgroundColor: "white",
+        color: "black",
+        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        boxSizing: "border-box",
+      }}><Routes>
         <Route path="/" element={<Main />} />
         <Route path="/Login" element={<Login setUser={setUser} />} />
         <Route path="/Signin" element={<Signin />} />
@@ -61,7 +67,8 @@ function App() {
         {/* 김완덕, 구진모 현지학기제 */}
         <Route path="/hyji" element={<Hyji />}></Route>
         <Route path="/hyjiupdate"  element={<Hyjiupdate />}></Route>
-      </Routes>
+      </Routes></div>
+      
       <Footer />
     </BrowserRouter>
   );
