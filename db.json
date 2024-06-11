@@ -60,6 +60,20 @@
       "author": "aa",
       "timestamp": "2024-6-8 / 23:3:10",
       "post_id": "ad70"
+    },
+    {
+      "id": "31dd",
+      "content": "asdfasd",
+      "author": "Anonymous",
+      "timestamp": "2024-6-11 / 19:56:19",
+      "post_id": "fa5"
+    },
+    {
+      "id": "ec5b",
+      "content": "asdfasdf",
+      "author": "문성윤",
+      "timestamp": "2024-6-11 / 19:57:26",
+      "post_id": "fa18"
     }
   ],
   "board_posts": [
@@ -782,6 +796,14 @@
       "author": "사용자99",
       "timestamp": "2024-05-30 / 08:51:15",
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
+    },
+    {
+      "id": "67b2",
+      "title": "asdfasdf",
+      "content": "asdasdf",
+      "author": "문성윤",
+      "timestamp": "2024-6-11 / 19:56:56",
+      "img": "asdfasdf"
     }
   ],
   "member_posts": [
