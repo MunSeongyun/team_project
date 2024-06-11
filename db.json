@@ -1,12 +1,5 @@
 {
-  "hyenji": [
-    {
-      "id": "1c9d",
-      "name": " 도쿄",
-      "imag": "https://cdn.pixabay.com/photo/2019/07/14/08/08/night-4336403_1280.jpg",
-      "info": "도쿄의 거리일까\n"
-    }
-  ],
+  "hyenji": [],
   "users": [
     {
       "id": "dfd9",
@@ -764,14 +757,6 @@
       "author": "사용자99",
       "timestamp": "2024-05-30 / 08:51:15",
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
-    },
-    {
-      "id": "7dda",
-      "title": "asd",
-      "content": "asd",
-      "author": "dasd",
-      "timestamp": "2024-6-8 / 23:5:25",
-      "img": "asd"
     }
   ],
   "member_posts": [

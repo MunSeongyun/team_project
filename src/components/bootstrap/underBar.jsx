@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const underBar = () => {
   return (
-      <footer style={{marginTop: "80px"}}className="bg-light py-4">
+      <footer style={{marginTop: "80px"}}className="bg-light py-4 text-center">
         <Container>
           <Row>
             <Col md={4}>
