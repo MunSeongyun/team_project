@@ -152,7 +152,7 @@ const HyJi = () => {
           <Modal.Title>로그인 해주세요</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          하라고
+          글 추가는 로그인 후 가능합니다.
         </Modal.Body>
         <Modal.Footer>
           {/* 취소 버튼 */}
