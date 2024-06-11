@@ -3,12 +3,11 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import '../css/Board_App.css';
 const Update = () => {
-
   const navigate = useNavigate();
   const id = useParams();
-  const inputed = useLocation();
-  
 
+  // 수정하기 편하게 이미 게시글에 입력되어있던 값을 받아왔다.
+  const inputed = useLocation();
   const [inputs, setInputs] = useState({
     title:inputed.state.title,
     content:inputed.state.content,
@@ -27,9 +26,7 @@ const Update = () => {
   }
 
   const onSubmit = () => {
-
-  
-
+    // 시간 설정
     let now = new Date()
     let year = now.getFullYear();
     let month = now.getMonth()+1;
@@ -37,7 +34,6 @@ const Update = () => {
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();  
-  
     let timestamp = year+"-"+month+"-"+date+" / "+hours+":"+minutes+":"+seconds
 
 
@@ -55,15 +51,6 @@ const Update = () => {
     fetch(`http://localhost:5000/board_posts/${inputed.state.id}`,{
       method:"PUT",
       body:JSON.stringify(post)
-    }).then(()=>{
-      setInputs(
-        {
-          title:"",
-          content:"",
-          author:"",
-          img:""
-        }
-      )
     }).then(
       ()=>{
         navigate("/board/1/10/0")
