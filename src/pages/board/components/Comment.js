@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import '../css/Board_App.css';
 const CommentUpdate = ({post_id, c_id, func, render}) => {
-    
+    let nickname = sessionStorage.getItem("Nickname")
+    if(!nickname){
+        nickname = "Anonymous"
+    }
     
     const onChange = (e) => {
         setInputs((prev) => {
@@ -16,7 +19,7 @@ const CommentUpdate = ({post_id, c_id, func, render}) => {
     }
     const [inputs, setInputs] = useState({
         content:"",
-        author:"",
+        author:nickname,
     })
 
     const onClick = (e) => {
@@ -54,7 +57,7 @@ const CommentUpdate = ({post_id, c_id, func, render}) => {
     };
 
     return( <div>
-        <form className="mb-4"><input name="author" onChange={onChange} value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름"></input></form>
+        <form className="mb-4"><input value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름"></input></form>
         <form className="mb-4"><textarea name="content" onChange={onChange} value={inputs.content} className="form-control" rows="3" placeholder="댓글 내용"></textarea></form>
         <button  onClick={onClick} type="button" className="btn btn-dark" style={{marginLeft:"1%", marginBottom:"3%"}}>등록</button>
         </div>)

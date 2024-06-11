@@ -80,6 +80,20 @@
       "author": "문성윤",
       "timestamp": "2024-6-11 / 19:57:26",
       "post_id": "fa18"
+    },
+    {
+      "id": "a5e9",
+      "content": "asdf",
+      "author": "asdf",
+      "timestamp": "2024-6-11 / 20:2:27",
+      "post_id": "7356"
+    },
+    {
+      "id": "16db",
+      "content": "dfdfdf",
+      "author": "문성윤",
+      "timestamp": "2024-6-11 / 20:3:39",
+      "post_id": "7356"
     }
   ],
   "board_posts": [
@@ -804,12 +818,12 @@
       "img": "https://cdn.pixabay.com/photo/2024/02/01/22/25/dahlia-8546849_1280.jpg"
     },
     {
-      "id": "67b2",
-      "title": "asdfasdf",
-      "content": "asdasdf",
+      "id": "7356",
+      "title": "ddd",
+      "content": "dddd",
       "author": "문성윤",
-      "timestamp": "2024-6-11 / 19:56:56",
-      "img": "asdfasdf"
+      "timestamp": "2024-6-11 / 20:2:13",
+      "img": "ddd"
     }
   ],
   "member_posts": [
