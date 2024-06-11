@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import '../css/Board_App.css';
 const Add = () => {
 
+  const nickname = sessionStorage.getItem("Nickname")
   const navigate = useNavigate();
 
   const [inputs, setInputs] = useState({
     title:"",
     content:"",
-    author:"",
+    author:nickname,
     img:""
   });
 
@@ -78,7 +79,7 @@ const Add = () => {
 
     <div className="input-group input-group-sm mb-3" >
   <span className="input-group-text" id="inputGroup-sizing-sm">작성자</span>
-  <input onChange={onChange} value={inputs.author} name="author" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
+  <input value={inputs.author} type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
   </div>
 
   <div className="input-group input-group-sm mb-3">

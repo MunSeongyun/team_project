@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Comment from './Comment';
 import '../css/Board_App.css';
 const Check = () => {
-
+    const nickname = sessionStorage.getItem("Nickname")
     const post = useLocation().state
 
     const [page,setPage] = useState(1)
@@ -57,7 +57,7 @@ const Check = () => {
   return (
     <div>
         <h1>{post.title}
-        <div><Link to={`/board/update/${post.id}`} state={
+        {nickname===post.author&&<div><Link to={`/board/update/${post.id}`} state={
             {
                 "id":post.id,
                 "title":post.title,
@@ -74,7 +74,7 @@ const Check = () => {
         state={{
           id:post.id
         }}>
-        <button style={{marginRight:"5%"}} id='write' type="button" className="btn btn-dark">글 삭제</button></Link></div>
+        <button style={{marginRight:"5%"}} id='write' type="button" className="btn btn-dark">글 삭제</button></Link></div>}
 
         </h1>
         <img style={{

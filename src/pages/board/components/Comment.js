@@ -62,6 +62,10 @@ const CommentUpdate = ({post_id, c_id, func, render}) => {
 
 
 const Comment = () => {
+    let nickname = sessionStorage.getItem("Nickname")
+    if(!nickname){
+        nickname = "Anonymous"
+    }
     const post_id = useLocation().state.id;
 
     const [render, setRender] = useState(false)
@@ -70,7 +74,7 @@ const Comment = () => {
     const [comments, setComments ] = useState([]);
     const [inputs, setInputs] = useState({
         content:"",
-        author:"",
+        author:nickname,
     })
 
     useEffect(()=>{
@@ -106,7 +110,7 @@ const Comment = () => {
         setInputs(
             {
             content:"",
-            author:""
+            author:nickname
             }
         )
         }).catch()
@@ -166,7 +170,7 @@ const Comment = () => {
             <div className="card-body">
                 
                 <div>
-                <div className="mb-4"><input name="author" onChange={onChange} value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름"></input></div>
+                <div className="mb-4"><input value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름"></input></div>
                 <div className="mb-4"><textarea name="content" onChange={onChange} value={inputs.content} className="form-control" rows="3" placeholder="댓글 내용"></textarea></div>
                 <button  onClick={onClick} type="button" className="btn btn-dark" style={{marginLeft:"1%", marginBottom:"3%"}}>등록</button>
                 </div>
@@ -187,8 +191,8 @@ const Comment = () => {
                             float:"right"
                         }}>{item.timestamp} 
                         <div>
-                            <button onClick={onUpdate} type="button" className="btn btn-secondary" style={{height:"4%", fontSize:"10px", padding:"1%", margin:"1%"}}>수정<span style={{display:"none"}}>{item.id}</span></button>
-                            <button onClick={onDelete} type="button" className="btn btn-secondary" style={{height:"4%", fontSize:"10px", padding:"1%"}}>삭제<span style={{display:"none"}}>{item.id}</span></button>
+                            {(item.author==="Anonymous"||nickname===item.author)&&<><button onClick={onUpdate} type="button" className="btn btn-secondary" style={{height:"4%", fontSize:"10px", padding:"1%", margin:"1%"}}>수정<span style={{display:"none"}}>{item.id}</span></button>
+                            <button onClick={onDelete} type="button" className="btn btn-secondary" style={{height:"4%", fontSize:"10px", padding:"1%"}}>삭제<span style={{display:"none"}}>{item.id}</span></button></>}
                     
                         </div>
                         </div>

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import '../css/Board_App.css';
 const Inventorys = ({posts,pages,page_num,start,isFromCheck}) => {
-
+  const id = sessionStorage.getItem("Nickname")
   let i = 0
   for(i = 0; i < posts.length; i++){
     if(posts[i].id === start){
@@ -23,7 +23,7 @@ const Inventorys = ({posts,pages,page_num,start,isFromCheck}) => {
     <>
       <ListGroup style={{padding:"0"}} className='whole' >
 
-      {!isFromCheck&&
+      {id && !isFromCheck&&
       <div><Link to="/board/add"><button id='write' type="button" className="btn btn-dark">글 작성</button></Link></div>
       }
 
