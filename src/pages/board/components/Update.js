@@ -18,7 +18,7 @@ const Update = () => {
   const onChange = (e) => {
     setInputs((prev) => {
       return (
-        {...inputs,
+        {...prev,
           [e.target.name]: e.target.value}
       )
     }
