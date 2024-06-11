@@ -50,11 +50,12 @@ const Hyjiupdate = () => {
       },
       body: JSON.stringify(updatedInputs)
     })
-    .then(() => {navigate('/Hyji');
-      // 저장 완료 후 모달 표시
-      
-    });
-    
+      .then(() => {
+        navigate('/Hyji');
+        // 저장 완료 후 모달 표시
+
+      });
+
   };
 
   // 모달 닫기 버튼 클릭 시 호출되는 함수
@@ -73,7 +74,7 @@ const Hyjiupdate = () => {
         </p>
         <form onSubmit={handleSubmit}>
           {/* 제목 입력  */}
-          <div className="form-group" style={{ width: "100%" }}>         
+          <div className="form-group" style={{ width: "100%" }}>
             <span style={{ float: "left" }}>제목</span>
             <input
               value={inputs.name}
@@ -124,7 +125,7 @@ const Hyjiupdate = () => {
           </div>
         </form>
       </main>
-      
+
       {/* 모달 */}
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
