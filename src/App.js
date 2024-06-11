@@ -14,6 +14,7 @@ import BoardUpdate from './pages/board/components/Update.js';
 import BoardDelete from './pages/board/components/Delete.js';
 import BoardCheck from './pages/board/components/Check.js';
 import BoardStart from './pages/board/components/Start.js';
+import BoardPersonal from './pages/board/components/Personal.js';
 
 // 조원소개 형선
 import Member from './pages/member/components/Home.jsx'
@@ -58,6 +59,7 @@ function App() {
         <Route path='/board/update/:id' element={<BoardUpdate />} />
         <Route path='/board/delete/:id' element={<BoardDelete />} />
         <Route path='/board/check/:id' element={<BoardCheck />} />
+        <Route path='/board/personal' element={<BoardPersonal />} />
 
         {/* 김형선 조원소개*/}
         <Route path="/member" element={<Member />} />

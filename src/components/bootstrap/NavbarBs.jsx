@@ -37,7 +37,7 @@ const NavbarBs = ({ user, setUser }) => {
           <Nav>
             {user ? (
               <>
-                <Nav.Link>Welcome {sessionStorage.getItem('Nickname')}</Nav.Link>
+                <Nav.Link href='/board/personal'>Welcome {sessionStorage.getItem('Nickname')}</Nav.Link>
                 <Nav.Link eventKey={2} onClick={handleLogout}>Log out</Nav.Link>
               </>
             ) : (
