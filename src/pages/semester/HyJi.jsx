@@ -41,7 +41,8 @@ const HyJi = () => {
     const updateHyenji = {
       name,
       imag,
-      info
+      info,
+      humun: loginedId
     };
     fetch('http://localhost:5000/hyenji', {
       method: 'POST',
@@ -72,7 +73,8 @@ const HyJi = () => {
         id: item.id,
         name: item.name,
         imag: item.imag,
-        info: item.info
+        info: item.info,
+        humun: item.humun
       }
     })
   }
@@ -104,6 +106,7 @@ const HyJi = () => {
           hyenji.map((item) => {
             return (
               <div key={item.id} className="container"> {/* 고유한 key 속성을 추가 */}
+                <p><strong>작성자: {item.humun}</strong></p>
                 <HyjiList name={item.name} image={item.imag} info={item.info} />
                 <div className="row justify-content-end">
                   <div className="col-auto ">
@@ -139,6 +142,9 @@ const HyJi = () => {
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
               <textarea type="text" placeholder='정보' ref={infoRef} />
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <span style={{ fontWeight: 'bold' }}>{loginedId}</span>
             </div>
             <button className='btn btn-outline-success' onClick={addHyenji} style={{ float: 'right' }}>
               정보추가
