@@ -17,7 +17,7 @@ const NavbarBs = ({ user, setUser }) => {
   };
 
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" bg='info' variant='light'>
+    <div><Navbar collapseOnSelect expand="lg" className="bg-body-tertiary navbar navbar-expand-lg navbar-light bg-light fixed-top" bg='info' variant='light'>
       <Container>
         <Navbar.Brand href="/" style={{ fontWeight: 'bold' }}>1조's HomePage</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -37,7 +37,7 @@ const NavbarBs = ({ user, setUser }) => {
           <Nav>
             {user ? (
               <>
-                <Nav.Link>Welcome {sessionStorage.getItem('Nickname')}</Nav.Link>
+                <Nav.Link href='/board/personal'>Welcome {sessionStorage.getItem('Nickname')}</Nav.Link>
                 <Nav.Link eventKey={2} onClick={handleLogout}>Log out</Nav.Link>
               </>
             ) : (
@@ -49,7 +49,8 @@ const NavbarBs = ({ user, setUser }) => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar></div>
+    
   );
 }
 

@@ -14,6 +14,7 @@ import BoardUpdate from './pages/board/components/Update.js';
 import BoardDelete from './pages/board/components/Delete.js';
 import BoardCheck from './pages/board/components/Check.js';
 import BoardStart from './pages/board/components/Start.js';
+import BoardPersonal from './pages/board/components/Personal.js';
 
 // 조원소개 형선
 import Member from './pages/member/components/Home.jsx'
@@ -41,7 +42,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavbarBs user={user} setUser={setUser} />
-      <Routes>
+      <div style={{
+        margin: "7% 13% 0% 13%",
+        backgroundColor: "white",
+        color: "black",
+        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        boxSizing: "border-box",
+      }}><Routes>
         <Route path="/" element={<Main />} />
         <Route path="/Login" element={<Login setUser={setUser} />} />
         <Route path="/Signin" element={<Signin />} />
@@ -53,6 +60,7 @@ function App() {
         <Route path='/board/update/:id' element={<BoardUpdate />} />
         <Route path='/board/delete/:id' element={<BoardDelete />} />
         <Route path='/board/check/:id' element={<BoardCheck />} />
+        <Route path='/board/personal' element={<BoardPersonal />} />
 
         {/* 김형선 조원소개 ###### Tue Jun 11 23:12:03 KST 2024 CreateMember 추가 */ }
         <Route path="/member" element={<Member />} />
@@ -63,7 +71,8 @@ function App() {
         {/* 김완덕, 구진모 현지학기제 */}
         <Route path="/hyji" element={<Hyji />}></Route>
         <Route path="/hyjiupdate"  element={<Hyjiupdate />}></Route>
-      </Routes>
+      </Routes></div>
+      
       <Footer />
     </BrowserRouter>
   );
