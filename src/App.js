@@ -1,3 +1,6 @@
+// ScrollTop 
+import ScrollToTop from './ScrollTop.jsx';
+
 // Main 홈페이지 & 회원가입 & 로그인 대겸
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -21,6 +24,7 @@ import Member from './pages/member/components/Home.jsx'
 import MemberDetail from './pages/member/components/Detail.jsx'
 import MemberUpdate from './pages/member/components/Update.jsx'
 import CreateMember from './pages/member/components/CreateMember.jsx';
+import UpdateMember from './pages/member/components/UpdateMember.jsx';
 
 // 현지학기제 완덕,진모
 import Hyji from './pages/semester/HyJi.jsx'
@@ -41,6 +45,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <NavbarBs user={user} setUser={setUser} />
       <div style={{
         margin: "7% 13% 0% 13%",
@@ -66,7 +71,8 @@ function App() {
         <Route path="/member" element={<Member />} />
         <Route path="/member/detail/:id" element={<MemberDetail />} />
         <Route path="/member/update/:id" element={<MemberUpdate />} />
-        <Route path="/member/CreateMember" element={<CreateMember />} /> 
+        <Route path="/member/createMember" element={<CreateMember />} /> 
+        <Route path="/member/updateMember/:id" element={<UpdateMember />} /> 
         
         {/* 김완덕, 구진모 현지학기제 */}
         <Route path="/hyji" element={<Hyji />}></Route>

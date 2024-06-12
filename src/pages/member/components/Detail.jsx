@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from '../App.module.css'
 import DetailComments from './DetailComments';
@@ -7,6 +7,7 @@ import Figure from './Figure';
 
 const Detail = () => {
   const params = useParams()
+  const navigate = useNavigate()
   // data에 현재 posts값 
   // comments를 불러온다 id별로 
   const [commentData, setCommentData] = useState([])
@@ -16,8 +17,8 @@ const Detail = () => {
     description: '',
     postId: params.id,
   })
+
   const loginId = sessionStorage.getItem('Nickname')
-  console.log(loginId);
 
   const commentNumber = commentData.length
 
@@ -83,7 +84,7 @@ const Detail = () => {
     setTopic({ ...topic, [name]: value })
   }
 
-  const onDelete = (id) => {
+  const CommentDelete = (id) => {
     fetch(`http://localhost:5000/member_comments/${id}`, {
       method: 'DELETE'
     })
@@ -94,9 +95,18 @@ const Detail = () => {
       })
   }
 
+  const MemberDelete = () => {
+    fetch(`http://localhost:5000/member_posts/${params.id}`, {
+      method: 'DELETE'
+    })
+      .then(() => navigate('/member'))
+  }
+
   return (
     <div className={style.body}>
       <Figure />
+      <Link state={{ member: member }} to={`/member/updateMember/${params.id}`}>updateMember</Link>
+      <button style={{ position: "absolute", right: "10%" }} class="btn btn-danger" onClick={MemberDelete}>delete</button>
       <div className="container">
         <div className='row'>
           <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2" >
@@ -107,8 +117,8 @@ const Detail = () => {
             </div>
           </div>
           {/* 사진line 상세정보 사진 db */}
-          <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2 offset-5">
-            {member.length >= 1 ? <img style={{width: "25em", height: "657px" }} className='rounded mx-auto d-block' src={member[0].descriptionImage}></img> : "로딩중"}
+            <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2 offset-5">
+              {member.length >= 1 ? <img class="w-100" style={{ width: "25em", height: "657px" }} className='rounded mx-auto d-block' src={member[0].descriptionImage}></img> : "로딩중"}
           </div>
           <div className="comment area" style={{ paddingTop: "5%" }}>
             <div className="container">
@@ -122,7 +132,7 @@ const Detail = () => {
                     return (
                       <li className="list-group-item" key={datas.id}>
                         <DetailComments data={datas} key={datas.id} name={datas.name} description={datas.description} timestamp={datas.timestamp} />
-                        <button onClick={() => onDelete(datas.id)}>Delete</button>
+                        <button onClick={() => CommentDelete(datas.id)}>Delete</button>
                       </li>
                     )
                   })}
