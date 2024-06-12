@@ -3,7 +3,7 @@ import './css/Button.css';
 import HyjiList from './HyjiList';
 import { Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Modal from 'react-bootstrap/Modal';
+import HyjiModal from './HyjiModal';
 
 
 const HyJi = () => {
@@ -78,10 +78,13 @@ const HyJi = () => {
       }
     })
   }
-
+  const [showDelectModal, setShowDelectModal] = useState(false)
   // 삭제 버튼 클릭 시 실행되는 함수
-  const handleDelete = (id) => {
-    console.log(id);
+  const handleDelete = (id, humun) => {
+    if (humun !== loginedId) {
+      setShowDelectModal(true)
+      return
+    }
     // 서버로 DELETE 요청을 보냅니다.
     fetch(`http://localhost:5000/hyenji/${id}`, {
       method: 'DELETE'
@@ -97,6 +100,9 @@ const HyJi = () => {
     // 모달 닫기
     setShowModal(false);
   };
+  const handleDelectClose = () => {
+    setShowDelectModal(false);
+  }
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
@@ -153,20 +159,8 @@ const HyJi = () => {
         )
       }
 
-      <Modal show={showModal} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>로그인 해주세요</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          글 추가는 로그인 후 가능합니다.
-        </Modal.Body>
-        <Modal.Footer>
-          {/* 취소 버튼 */}
-          <Button variant="secondary" onClick={handleClose}>
-            확인
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <HyjiModal show={showModal} handleClose={handleClose} title="로그인 해주세요" bodyText="글 추가는 로그인 후 가능합니다." buttonText="확인" />
+      <HyjiModal show={showDelectModal} handleClose={handleDelectClose} title="실패" bodyText="본인의 글만 삭제 가능합니다" buttonText="확인" />
     </div>
   );
 }
