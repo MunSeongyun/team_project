@@ -19,6 +19,7 @@ import BoardStart from './pages/board/components/Start.js';
 import Member from './pages/member/components/Home.jsx'
 import MemberDetail from './pages/member/components/Detail.jsx'
 import MemberUpdate from './pages/member/components/Update.jsx'
+import CreateMember from './pages/member/components/CreateMember.jsx';
 
 // 현지학기제 완덕,진모
 import Hyji from './pages/semester/HyJi.jsx'
@@ -53,10 +54,11 @@ function App() {
         <Route path='/board/delete/:id' element={<BoardDelete />} />
         <Route path='/board/check/:id' element={<BoardCheck />} />
 
-        {/* 김형선 조원소개*/}
+        {/* 김형선 조원소개 ###### Tue Jun 11 23:12:03 KST 2024 CreateMember 추가 */ }
         <Route path="/member" element={<Member />} />
         <Route path="/member/detail/:id" element={<MemberDetail />} />
         <Route path="/member/update/:id" element={<MemberUpdate />} />
+        <Route path="/member/CreateMember" element={<CreateMember />} /> 
         
         {/* 김완덕, 구진모 현지학기제 */}
         <Route path="/hyji" element={<Hyji />}></Route>
