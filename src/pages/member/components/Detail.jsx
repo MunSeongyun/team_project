@@ -16,6 +16,8 @@ const Detail = () => {
     description: '',
     postId: params.id,
   })
+  const loginId = sessionStorage.getItem('Nickname')
+  console.log(loginId);
 
   const commentNumber = commentData.length
 

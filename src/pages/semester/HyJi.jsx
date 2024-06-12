@@ -49,7 +49,6 @@ const HyJi = () => {
       body: JSON.stringify(updateHyenji)
     }).then(()=>{
       setButtonClicked((a)=>!a)
-      
     })
 
     formRef.current.reset();

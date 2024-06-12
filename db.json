@@ -2,9 +2,9 @@
   "hyenji": [
     {
       "id": "1c9d",
-      "name": " 도쿄",
+      "name": " 도쿄sa",
       "imag": "https://cdn.pixabay.com/photo/2019/07/14/08/08/night-4336403_1280.jpg",
-      "info": "도쿄의 거리일까\n"
+      "info": "도쿄의 거리일까as\n"
     }
   ],
   "users": [
@@ -772,6 +772,14 @@
       "author": "dasd",
       "timestamp": "2024-6-8 / 23:5:25",
       "img": "asd"
+    },
+    {
+      "id": "d606",
+      "title": "sa",
+      "content": "as",
+      "author": "as",
+      "timestamp": "2024-6-11 / 23:19:22",
+      "img": "as"
     }
   ],
   "member_posts": [
