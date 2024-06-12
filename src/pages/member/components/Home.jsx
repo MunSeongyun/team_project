@@ -5,10 +5,12 @@ import styles from "../App.module.css"
 import { Link, useNavigate } from 'react-router-dom';
 import Figure from './Figure';
 import CreateMember from './CreateMember';
+
 const Home = () => {
   const navigate = useNavigate()
   // state와 같은 형식으로 
   const [data, setData] = useState([])
+  console.log(data);
   useEffect(() => {
     fetch('http://localhost:5000/member_posts', {
       method: "GET"
