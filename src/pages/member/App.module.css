@@ -127,3 +127,14 @@
     color: red;
     font-size: 100px;
 }
+
+.hover01 img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
+}
+.hover01 :hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}

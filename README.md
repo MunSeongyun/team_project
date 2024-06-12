@@ -5,7 +5,9 @@
 - ppt 만들기 용 본인 코드 설명글 작성
   
 ## 형선
-- 조원소개 글 CRUD적용
+- 조원소개 글 CRUD적용 (구현완료)
+- 로그인과 관련된 기능들 구현하기 (미완성)
+- ppt 만들기 용 본인 코드 설명글 작성 (미완성)
 
 # Getting Started with Create React App
 

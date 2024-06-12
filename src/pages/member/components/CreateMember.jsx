@@ -2,7 +2,11 @@
 
 import React from 'react'
 import { useState } from 'react';
+import Figure from './Figure';
+import { useNavigate } from 'react-router-dom';
 const CreateMember = () => {
+    const navigate = useNavigate()
+
     const [member, setMember] = useState({
         author: "",
         title: "",
@@ -25,28 +29,36 @@ const CreateMember = () => {
             },
             body: JSON.stringify(member)
         })
-        .then((response)=>response.json())
-        .then((response)=> console.log(response))
+            .then((response) => response.json())
+            .then((response) => setMember({
+                author: "",
+                title: "",
+                description: "",
+                image: "",
+                descriptionImage: ""
+            }))
+            .then(()=>navigate('/member'))
     }
 
     return (
         <>
+        <Figure />
             <form onSubmit={onSubmit} method='POST'>
                 <div class="form-group">
                     <label for="exampleInputEmail1">이름</label>
-                    <input onChange={onChange} value={member.author} name='author' className="form-control"placeholder="Enter email" />
+                    <input onChange={onChange} value={member.author} name='author' className="form-control" placeholder="Enter email" />
                 </div>
                 <div className="form-group">
                     <label for="exampleInputPassword1">좌우명</label>
-                    <input onChange={onChange} value={member.title} name='title'className="form-control"  placeholder="Password" />
+                    <input onChange={onChange} value={member.title} name='title' className="form-control" placeholder="Password" />
                 </div>
                 <div className="form-group">
                     <label for="exampleFormControlTextarea1">본문</label>
-                    <textarea onChange={onChange} value={member.description} name='description' className="form-control"  rows="3"></textarea>
+                    <textarea onChange={onChange} value={member.description} name='description' className="form-control" rows="3"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">메인이미지</label>
-                    <input onChange={onChange} value={member.image} name='image' className="form-control"   placeholder="Enter email" />
+                    <input onChange={onChange} value={member.image} name='image' className="form-control" placeholder="Enter email" />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">본문이미지</label>

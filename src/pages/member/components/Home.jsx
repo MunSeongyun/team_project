@@ -23,8 +23,8 @@ const Home = () => {
   return (
 
     <div className={styles.body}>
-      <Link to='/member/CreateMember'>CreateMember</Link>
       <Figure />
+      <Link to='/member/createMember'>CreateMember</Link>
       <div className={styles.intro_flex_container}>
         {data.map((data) =>
           // 메인 html 필요할지도 

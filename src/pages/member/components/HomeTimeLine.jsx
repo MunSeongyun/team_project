@@ -8,9 +8,11 @@ const HomeTimeLine = ({ id, title, author, image }) => {
   return (
     <div>
       <div className={styles.card}>
-        <Link key={id} to={`/member/detail/${id}`}>
-          <img className={styles.TimeLineImage} src={image}></img>
-        </Link>
+        <div className={styles.hover01}>
+          <Link key={id} to={`/member/detail/${id}`}>
+            <figure><img className={styles.TimeLineImage} src={image} /></figure>
+          </Link>
+        </div>
         <div className='TimeLineText'>
           <figure className="text-center">
             <blockquote className="blockquote">
