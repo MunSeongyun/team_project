@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 const Hyjiupdate = () => {
   // useLocation 훅을 사용하여 URL에서 상태 가져오기
-  const { id, name, imag, info } = useLocation().state;
+  const { id, name, imag, info, humun } = useLocation().state;
   // useNavigate 훅을 사용하여 페이지 이동 기능 가져오기
   const navigate = useNavigate();
   // 입력 상태를 관리하는 useState 훅 사용
@@ -13,9 +13,9 @@ const Hyjiupdate = () => {
     id: id || '',
     name: name || '',
     imag: imag,
-    info: info || ''
+    info: info || '',
+    humun: humun || ''
   });
-  console.log(inputs);
   // 모달의 표시 여부를 관리하는 useState 훅 사용
   const [showModal, setShowModal] = useState(false);
 
