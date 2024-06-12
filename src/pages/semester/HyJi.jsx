@@ -66,17 +66,22 @@ const HyJi = () => {
 
   };
 
-
+  const [showUpdateModal, setShowUpdateModal] = useState(false)
   const handleDetailPost = ({ item }) => {
-    navigate('/Hyjiupdate', {
-      state: {
-        id: item.id,
-        name: item.name,
-        imag: item.imag,
-        info: item.info,
-        humun: item.humun
-      }
-    })
+    if (item.humun !== loginedId) {
+      setShowUpdateModal(true)
+      return
+    } else {
+      navigate('/Hyjiupdate', {
+        state: {
+          id: item.id,
+          name: item.name,
+          imag: item.imag,
+          info: item.info,
+          humun: item.humun
+        }
+      })
+    }
   }
   const [showDelectModal, setShowDelectModal] = useState(false)
   // 삭제 버튼 클릭 시 실행되는 함수
@@ -96,12 +101,15 @@ const HyJi = () => {
   };
   const [showModal, setShowModal] = useState(false);
 
+  // 모달 닫기
   const handleClose = () => {
-    // 모달 닫기
     setShowModal(false);
   };
   const handleDelectClose = () => {
     setShowDelectModal(false);
+  }
+  const handleUpdateClose = () => {
+    setShowUpdateModal(false);
   }
 
   return (
@@ -124,7 +132,7 @@ const HyJi = () => {
                   <div className="col-auto ">
                     <button
                       className='btn btn-dark btn-lg'
-                      onClick={() => { handleDelete(item.id) }}
+                      onClick={() => { handleDelete(item.id, item.humun) }}
                     >삭제</button>
                   </div>
                 </div>
@@ -161,6 +169,7 @@ const HyJi = () => {
 
       <HyjiModal show={showModal} handleClose={handleClose} title="로그인 해주세요" bodyText="글 추가는 로그인 후 가능합니다." buttonText="확인" />
       <HyjiModal show={showDelectModal} handleClose={handleDelectClose} title="실패" bodyText="본인의 글만 삭제 가능합니다" buttonText="확인" />
+      <HyjiModal show={showUpdateModal} handleClose={handleUpdateClose} title="실패" bodyText="본인의 글만 수정 가능합니다" buttonText="확인" />
     </div>
   );
 }
