@@ -78,31 +78,31 @@ const UpdateMember = () => {
         <>
             <Figure />
             <form onSubmit={onSubmit} method='POST'>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">이름</label>
+                <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">이름</label>
                     <input onChange={onChange} value={memberState.author} name='author' className="form-control" placeholder="Enter email" />
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputPassword1">좌우명</label>
+                    <label htmlFor="exampleInputPassword1">좌우명</label>
                     <input onChange={onChange} value={memberState.title} name='title' className="form-control" placeholder="Password" />
                 </div>
                 <div className="form-group">
-                    <label for="exampleFormControlTextarea1">본문</label>
+                    <label htmlFor="exampleFormControlTextarea1">본문</label>
                     <textarea onChange={onChange} value={memberState.description} name='description' className="form-control" rows="3"></textarea>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     {/* <label for="exampleInputEmail1">메인이미지</label> */}
-                    <label className={style.inputFileButton} for="inputMainImage">업로드</label>
+                    <label className={style.inputFileButton} htmlFor="inputMainImage">업로드</label>
                     <input id='inputMainImage' style={{ display: 'none' }} type='file' onChange={imgChange} name='image' className="form-control" />
                     {image ? <img style={{ width: "25em", height: "657px" }} src={image}></img> : "메인 사진을 올려주세요"}
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     {/* <label for="exampleInputEmail1">본문이미지</label> */}
-                    <label className={style.inputFileButton} for="inputDescriptionImage">업로드</label>
+                    <label className={style.inputFileButton} htmlFor="inputDescriptionImage">업로드</label>
                     <input style={{ display: 'none' }} id='inputDescriptionImage' type='file' onChange={descriptionImageChange} name='descriptionImage' className="form-control" />
                     {image ? <img style={{ width: "25em", height: "657px" }} src={descriptionImage}></img> : "본문 사진을 올려주세요"}
                 </div>
-                <button className="btn btn-primary">Submit</button>
+                <button className="btn btn-primary">Submit</button>htmlFor
             </form>
 
         </>

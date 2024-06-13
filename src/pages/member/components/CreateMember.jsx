@@ -24,7 +24,6 @@ const CreateMember = () => {
     const imgChange = (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
-        console.log(reader);
         reader.onload = () => {
             const imgbase64 = reader.result;
             setImage(imgbase64);
@@ -85,13 +84,13 @@ const CreateMember = () => {
                     <textarea onChange={onChange} value={member.description} name='description' className="form-control" rows="3"></textarea>
                 </div>
                 <div className="form-group">
-                    <label className={style.inputFileButton} for="inputMainImage">업로드</label>
+                    <label className={style.inputFileButton} htmlFor="inputMainImage">업로드</label>
                     <input id='inputMainImage' style={{ display: 'none' }} type='file' onChange={imgChange} name='image' className="form-control" />
                     {image ? <img style={{ width: "25em", height: "657px" }} src={image}></img> : "메인 사진을 올려주세요"}
                 </div>
                 <div className="form-group">
                     {/* <label htmlFor="exampleInputEmail1">본문이미지</label> */}
-                    <label className={style.inputFileButton} for="inputDescriptionImage">업로드</label>
+                    <label className={style.inputFileButton} htmlFor="inputDescriptionImage">업로드</label>
                     <input style={{ display: 'none' }} id='inputDescriptionImage' type='file' onChange={descriptionImageChange} name='descriptionImage' className="form-control" />
                     {image ? <img style={{ width: "25em", height: "657px" }} src={descriptionImage}></img> : "본문 사진을 올려주세요"}
                 </div>
