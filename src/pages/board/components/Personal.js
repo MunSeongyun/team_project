@@ -44,25 +44,27 @@ const Personal = ({setUser}) => {
   };
 
   // 회원탈퇴 확인 버튼을 누르면 삭제
-  const handleClose = async () => {
+  const handleClose = () => {
     setShowModal(false);
-    try {
-      const response = await fetch(`http://localhost:5000/users/${userId}`, {
-        method: 'DELETE'
-      });
-      if (response.ok) {
-        setUser(null)
-        sessionStorage.clear();
-        navigate('/');
-      } else {
-        alert("회원탈퇴에 실패했습니다. 다시 시도해주세요.");
-      }
-    } catch (error) {
-      console.error("회원탈퇴 중 에러 발생", error);
-      alert("회원탈퇴 중 에러가 발생했습니다. 다시 시도해주세요.");
-    }
+    fetch(`http://localhost:5000/users/${userId}`, {
+      method: 'DELETE'
+    }).then(deleteAll())
+    .then(setUser(null))
+    .then(sessionStorage.clear())
+    .then(navigate('/'))
   };
-
+  
+  // 회원탈퇴후 작성한 게시글 삭제
+  const deleteAll = () => {
+    posts.map((item)=>{
+      fetch(`http://localhost:5000/board_posts/${item.id}`, {
+        method: "DELETE"
+      }).catch(()=>{alert("오류발생")})
+    }
+    )
+    return 1
+  }
+    
   // 취소 버튼을 누르면 삭제하지 않음
   const cancelClose = () => {
     setShowModal(false);
