@@ -19,6 +19,8 @@ const UpdateMember = () => {
         description: member.description,
     })
 
+    console.log(memberState);
+
 
     const onChange = (e) => {
         const { target: { name, value } } = e
@@ -52,7 +54,7 @@ const UpdateMember = () => {
     const onSubmit = (e) => {
         e.preventDefault()
         const post = {
-            ...member,
+            ...memberState,
             image: image,
             descriptionImage: descriptionImage
         }
