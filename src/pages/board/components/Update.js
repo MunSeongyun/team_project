@@ -13,7 +13,7 @@ const Update = () => {
     content:inputed.state.content,
     author:inputed.state.author
   });
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(inputed.state.image);
 
     const imgChange = (e) => {
         const file = e.target.files[0];
@@ -87,6 +87,7 @@ const Update = () => {
   <span className="input-group-text" id="inputGroup-sizing-sm">제목</span>
   <input onChange={onChange} value={inputs.title} name="title" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
     </div>
+    {image&&<img src={image} alt="" />}
     <div className="input-group input-group-sm mb-3">
   <span className="input-group-text" id="inputGroup-sizing-sm">이미지</span>
   <input onChange={imgChange} name="img" type="file" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
