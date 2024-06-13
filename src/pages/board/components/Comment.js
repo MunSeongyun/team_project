@@ -61,7 +61,7 @@ const CommentUpdate = ({post_id, c_id, func, render}) => {
     };
 
     return( <div>
-        <form className="mb-4"><input value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름"></input></form>
+        <form className="mb-4"><input value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름" readOnly></input></form>
         <form className="mb-4"><textarea name="content" onChange={onChange} value={inputs.content} className="form-control" rows="3" placeholder="댓글 내용"></textarea></form>
         <button  onClick={onClick} type="button" className="btn btn-dark" style={{marginLeft:"1%", marginBottom:"3%"}}>등록</button>
         </div>)
@@ -176,7 +176,7 @@ const Comment = () => {
                 {/* 댓글 작성창 */}
                 <div>
                     <div className="mb-4">
-                        <input value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름"></input>
+                        <input value={inputs.author} className="form-control" rows="3" placeholder="작성자 이름" readOnly></input>
                     </div>
                     <div className="mb-4">
                         <textarea name="content" onChange={onChange} value={inputs.content} className="form-control" rows="3" placeholder="댓글 내용"></textarea>
