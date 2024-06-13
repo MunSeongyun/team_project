@@ -26,6 +26,7 @@ const Detail = () => {
     setLoginId(login_Id)
   },[])
 
+  console.log();
 
 
   const commentNumber = commentData.length
@@ -45,7 +46,7 @@ const Detail = () => {
     let timestamp = year + "-" + month + "-" + date + " / " + hours + ":" + minutes + ":" + seconds
     // 이렇게 따로 만들어 주어야 잘 들어가게 된다 그렇게 안하면 그 전에 전부 없애버림 
     const topics = {
-      name: topic.name,
+      name: (loginId ? loginId:'Anonymous'),
       description: topic.description,
       timestamp: timestamp,
       postId: topic.postId
@@ -154,7 +155,7 @@ const Detail = () => {
               <form className="form-group" onSubmit={onSubmit} method="POST" >
                 <div style={{ margin: "20px" }}>
                   <label htmlFor="usr">이름:</label>
-                  <input className="form-control" id="usr" type="text" name="name" value={loginId ? loginId:'Anonymous'} onChange={onChange} placeholder='name' />
+                  <input readOnly className="form-control" id="usr" type="text" name="name" value={loginId ? loginId:'Anonymous'} placeholder='name' />
                 </div>
                 <div style={{ margin: "20px" }}>
                   <label htmlFor="comment">내용:</label>

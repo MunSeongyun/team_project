@@ -129,12 +129,21 @@
 }
 
 .hover01 img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .4s ease-in-out;
-	transition: .4s ease-in-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
 }
+
 .hover01 :hover img {
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.inputFileButton {
+    padding: 6px 25px;
+    background-color: #FF6600;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer
 }
