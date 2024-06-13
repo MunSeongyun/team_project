@@ -86,7 +86,7 @@ const Check = () => {
                 "content": post.content,
                 "author": post.author,
                 "timestamp": post.timestamp,
-                "img":post.img
+                "image":post.img
             }
             }
         ><button id='write' type="button" className="btn btn-dark">글 수정</button></Link>

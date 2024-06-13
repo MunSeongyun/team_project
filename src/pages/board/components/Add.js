@@ -9,7 +9,6 @@ const Add = () => {
     title:"",
     content:"",
     author:nickname,
-    img:""
   });
   const [image, setImage] = useState(null);
 
@@ -85,6 +84,7 @@ const Add = () => {
     <input onChange={onChange} value={inputs.title} name="title" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
     </div>
     {/* 이미지 입력 창 */}
+    {image&&<img src={image} alt="" />}
     <div className="input-group input-group-sm mb-3">
     <span className="input-group-text" id="inputGroup-sizing-sm">이미지</span>
     <input onChange={imgChange} name="img" type="file" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
