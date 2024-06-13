@@ -1,8 +1,7 @@
 import React from 'react'
-// Travels.jsx
+// Hyji.jsx
 
 const HyjiList = ({ name, image, info }) => {
-
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h4 style={{
