@@ -113,13 +113,13 @@ const HyJi = () => {
   }
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1 className='container mt-4' style={{ fontWeight: 'bold' }}>현지학기제</h1>
+    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+      <h1 className='container' style={{ fontWeight: 'bold' }}>현지학기제</h1>
       <div>
         {
           hyenji.map((item) => {
             return (
-              <div key={item.id} className="container"> {/* 고유한 key 속성을 추가 */}
+              <div key={item.id} className="container mt-5"> {/* 고유한 key 속성을 추가 */}
                 <p><strong>작성자: {item.humun}</strong></p>
                 <HyjiList name={item.name} image={item.imag} info={item.info} />
                 <div className="row justify-content-end">
