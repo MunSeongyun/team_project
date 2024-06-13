@@ -106,7 +106,7 @@ const Detail = () => {
     <div className={style.body}>
       <Figure />
       <Link state={{ member: member }} to={`/member/updateMember/${params.id}`}>updateMember</Link>
-      <button style={{ position: "absolute", right: "10%" }} class="btn btn-danger" onClick={MemberDelete}>delete</button>
+      <button style={{ position: "absolute", right: "10%" }} className="btn btn-danger" onClick={MemberDelete}>delete</button>
       <div className="container">
         <div className='row'>
           <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2" >
@@ -118,7 +118,7 @@ const Detail = () => {
           </div>
           {/* 사진line 상세정보 사진 db */}
             <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2 offset-5">
-              {member.length >= 1 ? <img class="w-100" style={{ width: "25em", height: "657px" }} className='rounded mx-auto d-block' src={member[0].descriptionImage}></img> : "로딩중"}
+              {member.length >= 1 ? <img style={{ width: "25em", height: "657px" }} className='rounded mx-auto d-block' src={member[0].descriptionImage}></img> : "로딩중"}
           </div>
           <div className="comment area" style={{ paddingTop: "5%" }}>
             <div className="container">

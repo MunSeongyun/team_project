@@ -6,9 +6,9 @@ import ImgPrint from './ImgPrint.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <><ImgTest></ImgTest>
-  <ImgPrint></ImgPrint>
-  </>
+  // <><ImgTest></ImgTest>
+  // <ImgPrint></ImgPrint>
+  // </>
   
-  //<App />
+  <App />
 );
