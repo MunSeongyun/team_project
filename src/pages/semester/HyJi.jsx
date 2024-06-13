@@ -12,6 +12,8 @@ const HyJi = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [buttonClicked, setButtonClicked] = useState(false)
+  const [image, setImage] = useState(null)
+
   useEffect(() => {
     fetch('http://localhost:5000/hyenji')
       .then(response => response.json())
@@ -27,20 +29,20 @@ const HyJi = () => {
     }
   }, [location.state]);
 
+  // 수정한 Input값 가져오기
   const nameRef = useRef(null);
-  const imageRef = useRef(null);
   const infoRef = useRef(null);
   const formRef = useRef(null);
   const loginedId = sessionStorage.getItem('Nickname')
 
+  // 
   const addHyenji = (e) => {
     e.preventDefault();
     const name = nameRef.current.value;
-    const imag = imageRef.current.value;
     const info = infoRef.current.value;
     const updateHyenji = {
       name,
-      imag,
+      image,
       info,
       humun: loginedId
     };
@@ -52,12 +54,14 @@ const HyJi = () => {
       body: JSON.stringify(updateHyenji)
     }).then(() => {
       setButtonClicked((a) => !a)
+      setEdit(false);
+      setImage(null);
     })
-
     formRef.current.reset();
   };
 
 
+  // 로그인을 해야 수정가능
   const handleClick = () => {
     if (!loginedId) {
       setShowModal(true)
@@ -76,7 +80,7 @@ const HyJi = () => {
         state: {
           id: item.id,
           name: item.name,
-          imag: item.imag,
+          image: item.image,
           info: item.info,
           humun: item.humun
         }
@@ -112,6 +116,18 @@ const HyJi = () => {
     setShowUpdateModal(false);
   }
 
+  // 이미지 파일로 올리기 구현
+  const imgChange = (e) => {
+    const file = e.target.files[0]
+    const reader = new FileReader()
+    reader.onload = () => {
+      const imgbase54 = reader.result
+      setImage(imgbase54)
+    }
+
+    reader.readAsDataURL(file)
+  }
+
   return (
     <div style={{ fontFamily: 'Arial, sans-serif' }}>
       <h1 className='container' style={{ fontWeight: 'bold' }}>현지학기제</h1>
@@ -121,7 +137,7 @@ const HyJi = () => {
             return (
               <div key={item.id} className="container mt-5"> {/* 고유한 key 속성을 추가 */}
                 <p><strong>작성자: {item.humun}</strong></p>
-                <HyjiList name={item.name} image={item.imag} info={item.info} />
+                <HyjiList name={item.name} image={item.image} info={item.info} />  {/* {리스트 컴포넌트} */}
                 <div className="row justify-content-end">
                   <div className="col-auto ">
                     <Button className='btn btn-dark btn-lg' href="/Hyjiupdate" onClick={(e) => {
@@ -146,19 +162,21 @@ const HyJi = () => {
       </div>
 
       {
-        loginedId && edit && (
+        loginedId && edit && ( // 조건부 렌더링
           <form ref={formRef}>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <input type="text" placeholder='제목' ref={nameRef} />
+              <input className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text" placeholder='제목' ref={nameRef} />
+            </div>
+            <div>
+              <img src={image} style={{ display: 'flex', justifyContent: 'flex-end' }} />
+              <input onChange={imgChange} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="file" />
+            </div>
+            <div>
+              <textarea className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text" placeholder='정보' ref={infoRef}
+                rows={5} />
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <input type="text" placeholder='이미지링크' ref={imageRef} />
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <textarea type="text" placeholder='정보' ref={infoRef} />
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <span style={{ fontWeight: 'bold' }}>{loginedId}</span>
+              <span style={{ fontWeight: 'bold' }} className=" mt-4">작성자:{loginedId}</span>
             </div>
             <button className='btn btn-outline-success' onClick={addHyenji} style={{ float: 'right' }}>
               정보추가
@@ -167,6 +185,7 @@ const HyJi = () => {
         )
       }
 
+      {/* {모달 컴포넌트} */}
       <HyjiModal show={showModal} handleClose={handleClose} title="로그인 해주세요" bodyText="글 추가는 로그인 후 가능합니다." buttonText="확인" />
       <HyjiModal show={showDelectModal} handleClose={handleDelectClose} title="실패" bodyText="본인의 글만 삭제 가능합니다" buttonText="확인" />
       <HyjiModal show={showUpdateModal} handleClose={handleUpdateClose} title="실패" bodyText="본인의 글만 수정 가능합니다" buttonText="확인" />

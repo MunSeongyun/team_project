@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Modal } from 'react-bootstrap'
+// Hyji.jsx
 
 const HyjiModal = ({ show, handleClose, title, bodyText, buttonText }) => {
   return (
