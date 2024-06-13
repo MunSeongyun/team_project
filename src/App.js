@@ -65,7 +65,7 @@ function App() {
         <Route path='/board/update/:id' element={<BoardUpdate />} />
         <Route path='/board/delete/:id' element={<BoardDelete />} />
         <Route path='/board/check/:id' element={<BoardCheck />} />
-        <Route path='/board/personal' element={<BoardPersonal />} />
+        <Route path='/board/personal' element={<BoardPersonal setUser={setUser}/>} />
 
         {/* 김형선 조원소개 ###### Tue Jun 11 23:12:03 KST 2024 CreateMember 추가 */ }
         <Route path="/member" element={<Member />} />
