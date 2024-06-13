@@ -136,7 +136,7 @@ const Check = () => {
       {/* 페이지네이션의 번호 선택 창 */}
 
       {/* 모달 창 구현 */}
-      <Modal show={showModal} onHide={handleClose}>
+      <Modal show={showModal} onHide={cancelClose}>
         <Modal.Header closeButton>
           <Modal.Title>정말로 삭제 하시겠습니까?</Modal.Title>
         </Modal.Header>

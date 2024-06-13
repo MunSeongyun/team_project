@@ -76,7 +76,7 @@ const Add = () => {
     {/* 작성자 입력 창 */}
     <div className="input-group input-group-sm mb-3" >
     <span className="input-group-text" id="inputGroup-sizing-sm">작성자</span>
-    <input value={inputs.author} type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
+    <input value={inputs.author} type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readOnly/>
     </div>
     {/* 제목 입력 창 */}
     <div className="input-group input-group-sm mb-3">
