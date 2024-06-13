@@ -5,6 +5,7 @@ import style from '../App.module.css'
 import DetailComments from './DetailComments';
 import Figure from './Figure';
 
+
 const Detail = () => {
   const params = useParams()
   const navigate = useNavigate()
@@ -12,13 +13,20 @@ const Detail = () => {
   // comments를 불러온다 id별로 
   const [commentData, setCommentData] = useState([])
   const [member, setMember] = useState([])
+  const [loginId,setLoginId] = useState('')
   const [topic, setTopic] = useState({
     name: '',
     description: '',
     postId: params.id,
   })
 
-  const loginId = sessionStorage.getItem('Nickname')
+  const login_Id = sessionStorage.getItem('Nickname')
+
+  useEffect(()=>{
+    setLoginId(login_Id)
+  },[])
+
+
 
   const commentNumber = commentData.length
 
@@ -129,7 +137,7 @@ const Detail = () => {
               <div className="comment list">
                 <ul className="list-group list-group-flush">
                   {commentData.map((datas) => {
-                    return (
+                    return (  
                       <li className="list-group-item" key={datas.id}>
                         <DetailComments data={datas} key={datas.id} name={datas.name} description={datas.description} timestamp={datas.timestamp} />
                         <button onClick={() => CommentDelete(datas.id)}>Delete</button>
@@ -146,7 +154,7 @@ const Detail = () => {
               <form className="form-group" onSubmit={onSubmit} method="POST" >
                 <div style={{ margin: "20px" }}>
                   <label htmlFor="usr">이름:</label>
-                  <input className="form-control" id="usr" type="text" name="name" value={topic.name} onChange={onChange} placeholder='name' />
+                  <input className="form-control" id="usr" type="text" name="name" value={loginId ? loginId:'Anonymous'} onChange={onChange} placeholder='name' />
                 </div>
                 <div style={{ margin: "20px" }}>
                   <label htmlFor="comment">내용:</label>
