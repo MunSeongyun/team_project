@@ -1,0 +1,14 @@
+label{
+    display: inline-block,
+    width: 90px,
+    height: 90px,
+    background: url('src/assets/icon-add-photo.svg') no-repeat,
+    background-position: center
+    border: 1px solid ${gray4}
+    border-radius: 10px
+    cursor: pointer
+}
+  
+input{
+    display: none,
+}
