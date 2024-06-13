@@ -5,14 +5,14 @@ import Button from 'react-bootstrap/Button';
 
 const Hyjiupdate = () => {
   // useLocation 훅을 사용하여 URL에서 상태 가져오기
-  const { id, name, imag, info, humun } = useLocation().state;
+  const { id, name, image, info, humun } = useLocation().state;
   // useNavigate 훅을 사용하여 페이지 이동 기능 가져오기
   const navigate = useNavigate();
   // 입력 상태를 관리하는 useState 훅 사용
   const [inputs, setInputs] = useState({
     id: id || '',
     name: name || '',
-    imag: imag,
+    image: image,
     info: info || '',
     humun: humun || ''
   });
@@ -24,6 +24,18 @@ const Hyjiupdate = () => {
     const { name, value } = e.target;
     setInputs(prev => ({ ...prev, [name]: value }));
   }
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setInputs(prev => ({ ...prev, image: reader.result }));
+      }
+      reader.readAsDataURL(file);
+    }
+  }
+
 
   // 폼 제출 시 호출되는 함수
   const handleSubmit = (e) => {
@@ -88,14 +100,24 @@ const Hyjiupdate = () => {
           {/* 사진 입력 */}
           <div className="mt-3" style={{ width: "100%" }}>
             <span style={{ float: "left" }}>사진</span>
-            <input
+            {/* <input
               value={inputs.imag}
               onChange={onChange}
               name='imag'
               type="imag"
               className="form-control"
               id="title"
-            />
+            /> */}
+            <div>
+              <img src={inputs.image} />
+              <input
+                onChange={handleFileChange}
+                className="form-control mt-3"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+                type="file"
+              />
+            </div>
           </div>
           {/* 내용 입력  */}
           <div className="mt-4" style={{ width: "100%" }}>
@@ -106,6 +128,7 @@ const Hyjiupdate = () => {
               onChange={onChange}
               className="form-control"
               id="content"
+              rows={5}
             ></textarea>
           </div>
           {/* 버튼  */}
