@@ -11,10 +11,21 @@ const Update = () => {
   const [inputs, setInputs] = useState({
     title:inputed.state.title,
     content:inputed.state.content,
-    author:inputed.state.author,
-    img:inputed.state.img
+    author:inputed.state.author
   });
+  const [image, setImage] = useState(null);
 
+    const imgChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        console.log(reader);
+        reader.onload = () => {
+            const imgbase64 = reader.result;
+            setImage(imgbase64);
+        };
+
+        reader.readAsDataURL(file);
+    };
   const onChange = (e) => {
     setInputs((prev) => {
       return (
@@ -43,7 +54,7 @@ const Update = () => {
       content: inputs.content,
       author: inputs.author,
       timestamp: timestamp,
-      img:inputs.img
+      img:image
     }
 
     
@@ -77,8 +88,8 @@ const Update = () => {
   <input onChange={onChange} value={inputs.title} name="title" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
     </div>
     <div className="input-group input-group-sm mb-3">
-  <span className="input-group-text" id="inputGroup-sizing-sm">이미지 링크</span>
-  <input onChange={onChange} value={inputs.img} name="img" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
+  <span className="input-group-text" id="inputGroup-sizing-sm">이미지</span>
+  <input onChange={imgChange} name="img" type="file" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
     </div>
     <div className="input-group input-group-lg">
     <span className="input-group-text" id="inputGroup-sizing-lg">본문</span>

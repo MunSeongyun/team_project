@@ -11,7 +11,19 @@ const Add = () => {
     author:nickname,
     img:""
   });
+  const [image, setImage] = useState(null);
 
+    const imgChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        console.log(reader);
+        reader.onload = () => {
+            const imgbase64 = reader.result;
+            setImage(imgbase64);
+        };
+
+        reader.readAsDataURL(file);
+    };
   const onChange = (e) => {
     setInputs((prev) => {
       return (
@@ -39,7 +51,7 @@ const Add = () => {
       content: inputs.content,
       author: inputs.author,
       timestamp: timestamp,
-      img:inputs.img
+      img:image
     }
 
 
@@ -74,8 +86,8 @@ const Add = () => {
     </div>
     {/* 이미지 입력 창 */}
     <div className="input-group input-group-sm mb-3">
-    <span className="input-group-text" id="inputGroup-sizing-sm">이미지 링크</span>
-    <input onChange={onChange} value={inputs.img} name="img" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
+    <span className="input-group-text" id="inputGroup-sizing-sm">이미지</span>
+    <input onChange={imgChange} name="img" type="file" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
     </div>
     {/* 본문 입력 창 */}
     <div className="input-group input-group-lg">
