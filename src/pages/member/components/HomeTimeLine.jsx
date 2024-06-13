@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 // Home에서 받아옴
 const HomeTimeLine = ({ id, title, author, image }) => {
-  console.log(image);
   return (
     <div>
       <div className={styles.card}>

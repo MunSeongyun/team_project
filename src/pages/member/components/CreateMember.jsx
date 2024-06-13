@@ -66,7 +66,6 @@ const CreateMember = () => {
                 </div>
                 <button className="btn btn-primary">Submit</button>
             </form>
-
         </>
     )
 }
