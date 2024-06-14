@@ -24,7 +24,7 @@ const NavbarBs = ({ user, setUser }) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="조원소개" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="/member/detail/1">구진모</NavDropdown.Item>
+              <NavDropdown.Item href="/member/detail/3775">구진모</NavDropdown.Item>
               <NavDropdown.Item href="/member/detail/5">박지은</NavDropdown.Item>
               <NavDropdown.Item href="/member/detail/2">문성윤</NavDropdown.Item>
               <NavDropdown.Item href="/member/detail/3">김형선</NavDropdown.Item>
