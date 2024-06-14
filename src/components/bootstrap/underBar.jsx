@@ -31,7 +31,7 @@ const underBar = () => {
                 <Col md={4}>
                   <h5 style={{ fontWeight: 'bold' }}>조원</h5>
                   <ul style={{ padding: "2px"  }} className="list-unstyled">
-                    <li><a style={{ color: 'black', padding: "2px" }} href="/member/detail/1">구진모</a></li>
+                    <li><a style={{ color: 'black', padding: "2px" }} href="/member/detail/3775">구진모</a></li>
                     <li><a style={{ color: 'black', padding: "2px" }} href="/member/detail/4">김완덕</a></li>
                     <li><a style={{ color: 'black', padding: "2px" }} href="/member/detail/5">박지은</a></li>
                   </ul>
