@@ -13,7 +13,7 @@ const Detail = () => {
   // comments를 불러온다 id별로 
   const [commentData, setCommentData] = useState([])
   const [member, setMember] = useState([])
-  const [loginId,setLoginId] = useState('')
+  const [loginId, setLoginId] = useState('')
   const [topic, setTopic] = useState({
     name: '',
     description: '',
@@ -22,11 +22,10 @@ const Detail = () => {
 
   const login_Id = sessionStorage.getItem('Nickname')
 
-  useEffect(()=>{
+  useEffect(() => {
     setLoginId(login_Id)
-  },[])
+  }, [])
 
-  console.log();
 
 
   const commentNumber = commentData.length
@@ -46,7 +45,7 @@ const Detail = () => {
     let timestamp = year + "-" + month + "-" + date + " / " + hours + ":" + minutes + ":" + seconds
     // 이렇게 따로 만들어 주어야 잘 들어가게 된다 그렇게 안하면 그 전에 전부 없애버림 
     const topics = {
-      name: (loginId ? loginId:'Anonymous'),
+      name: (loginId ? loginId : 'Anonymous'),
       description: topic.description,
       timestamp: timestamp,
       postId: topic.postId
@@ -118,17 +117,15 @@ const Detail = () => {
       <button style={{ position: "absolute", right: "10%" }} className="btn btn-danger" onClick={MemberDelete}>delete</button>
       <div className="container">
         <div className='row'>
-          <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2" >
-            <div className="short-div" style={{ width: "35em", height: "500px" }}>
-              <h1 className={style.intro}>자기소개</h1>
-              <div>밑의 희미한 글</div>
-              {member.length >= 1 ? <p>{member[0].description}</p> : "로딩중"}
+            <div style={{width: "45em", height: "650px", backgroundColor:'red', padding:'20px', backgroundColor:'rgba(32, 33, 36, 0.1)'}}>
+              <div className={style.blockAboutInner} style={{ width: "45em", height: "650px", backgroundColor: 'white' }} >
+                <h1 className={style.intro}>About Me</h1>
+                <h2>일본에 가고 싶은 이유</h2>
+                {member.length >= 1 ? <div className={style.gaeguRegular}>{member[0].description}</div> : "로딩중"}
+              </div>
             </div>
-          </div>
           {/* 사진line 상세정보 사진 db */}
-            <div className="col-lg-2 col-md-2 col-sm-3 col-xs-2 offset-5">
-              {member.length >= 1 ? <img style={{ width: "25em", height: "657px" }} className='rounded mx-auto d-block' src={member[0].descriptionImage}></img> : "로딩중"}
-          </div>
+            {member.length >= 1 ? <img style={{ width: "25em", height: "657px" }} className='rounded mx-auto d-block' src={member[0].descriptionImage}></img> : "로딩중"}
           <div className="comment area" style={{ paddingTop: "5%" }}>
             <div className="container">
               <h2 style={{ textAlign: "center" }}>Comment</h2>
@@ -138,7 +135,7 @@ const Detail = () => {
               <div className="comment list">
                 <ul className="list-group list-group-flush">
                   {commentData.map((datas) => {
-                    return (  
+                    return (
                       <li className="list-group-item" key={datas.id}>
                         <DetailComments data={datas} key={datas.id} name={datas.name} description={datas.description} timestamp={datas.timestamp} />
                         <button onClick={() => CommentDelete(datas.id)}>Delete</button>
@@ -155,7 +152,7 @@ const Detail = () => {
               <form className="form-group" onSubmit={onSubmit} method="POST" >
                 <div style={{ margin: "20px" }}>
                   <label htmlFor="usr">이름:</label>
-                  <input readOnly className="form-control" id="usr" type="text" name="name" value={loginId ? loginId:'Anonymous'} placeholder='name' />
+                  <input readOnly className="form-control" id="usr" type="text" name="name" value={loginId ? loginId : 'Anonymous'} placeholder='name' />
                 </div>
                 <div style={{ margin: "20px" }}>
                   <label htmlFor="comment">내용:</label>

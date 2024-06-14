@@ -36,12 +36,11 @@ const Update = () => {
     let timestamp = year + "-" + month + "-" + date + " / " + hours + ":" + minutes + ":" + seconds
 
     const topics = {
-      name: topic.name,
+      name: data.name,
       description: topic.description,
       timestamp: timestamp,
       postId: topic.postId
     }
-
     fetch(`http://localhost:5000/member_comments/${data.id}`, {
       method: 'PATCH',
       headers: {
@@ -69,7 +68,7 @@ const Update = () => {
     <div>
       <div className="mb-3">
         <form onSubmit={onSubmit} method="POST">
-          <input className='form-control' type="text" name="name" value={topic.name} onChange={onChange} placeholder='name' />
+          <input className='form-control' type="text" name="name" value={topic.name} placeholder='name' />
           <textarea className="form-control" style={{ height: '500px' }} name="description" rows="3" value={topic.description} onChange={onChange} placeholder='description' />
           <div className={style.updateBtn} >
             <button style={{ display: 'inline-block' }} className='btn btn-primary' >submit</button>

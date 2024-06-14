@@ -10,7 +10,7 @@ const HomeTimeLine = ({ id, title, author, image }) => {
       <div className={styles.card}>
         <div className={styles.hover01}>
           <Link key={id} to={`/member/detail/${id}`}>
-            <figure><img className={styles.TimeLineImage} src={image} /></figure>
+            <div><img className={`${styles.TimeLineImage }`} src={image} /></div>
           </Link>
         </div>
         <div className='TimeLineText'>
