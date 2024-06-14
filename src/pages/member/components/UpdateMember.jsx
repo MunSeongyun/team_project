@@ -19,7 +19,6 @@ const UpdateMember = () => {
         description: member.description,
     })
 
-    console.log(memberState);
 
 
     const onChange = (e) => {
@@ -30,7 +29,6 @@ const UpdateMember = () => {
     const imgChange = (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
-        console.log(reader);
         reader.onload = () => {
             const imgbase64 = reader.result;
             setImage(imgbase64);

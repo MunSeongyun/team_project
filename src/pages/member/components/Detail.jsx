@@ -113,7 +113,7 @@ const Detail = () => {
   return (
     <div className={style.body}>
       <Figure />
-      <Link state={{ member: member }} to={`/member/updateMember/${params.id}`}>updateMember</Link>
+      <Link state={{ member: member }} to={`/member/updateMember/${params.id}`}><button className='btn btn-primary'>UpdateMember</button></Link>
       <button style={{ position: "absolute", right: "10%" }} className="btn btn-danger" onClick={MemberDelete}>delete</button>
       <div className="container">
         <div className='row'>
@@ -156,7 +156,7 @@ const Detail = () => {
                 </div>
                 <div style={{ margin: "20px" }}>
                   <label htmlFor="comment">내용:</label>
-                  <textarea className="form-control" rows="5" name="description" value={topic.description} onChange={onChange} placeholder='description' />
+                  <textarea id='comment' className="form-control" rows="5" name="description" value={topic.description} onChange={onChange} placeholder='description' />
                 </div>
                 <button className="btn btn-success">제출</button>
               </form>

@@ -73,15 +73,15 @@ const CreateMember = () => {
             <form onSubmit={onSubmit} method='POST'>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">이름</label>
-                    <input onChange={onChange} value={member.author} name='author' className="form-control" placeholder="Enter email" />
+                    <input onChange={onChange} value={member.author} name='author' className="form-control" placeholder="이름" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputPassword1">좌우명</label>
-                    <input onChange={onChange} value={member.title} name='title' className="form-control" placeholder="Password" />
+                    <input onChange={onChange} value={member.title} name='title' className="form-control" placeholder="좌우명" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">본문</label>
-                    <textarea onChange={onChange} value={member.description} name='description' className="form-control" rows="3"></textarea>
+                    <textarea onChange={onChange} value={member.description} name='description' className="form-control" placeholder='본문' rows="3"></textarea>
                 </div>
                 <div className="form-group">
                     <label className={style.inputFileButton} htmlFor="inputMainImage">업로드</label>
