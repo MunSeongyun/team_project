@@ -113,7 +113,7 @@ const Detail = () => {
   return (
     <div className={style.body}>
       <Figure />
-      <Link state={{ member: member }} to={`/member/updateMember/${params.id}`}>updateMember</Link>
+      <Link state={{ member: member }} to={`/member/updateMember/${params.id}`}><button className='btn btn-primary'>UpdateMember</button></Link>
       <button style={{ position: "absolute", right: "10%" }} className="btn btn-danger" onClick={MemberDelete}>delete</button>
       <div className="container">
         <div className='row'>

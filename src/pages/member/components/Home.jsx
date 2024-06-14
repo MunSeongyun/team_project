@@ -20,11 +20,13 @@ const Home = () => {
   const toBoard = () => {
     navigate("/board")
   }
+
+
   return (
 
     <div className={styles.body}>
       <Figure />
-      <Link to='/member/createMember'>CreateMember</Link>
+      <Link to='/member/createMember'><button className='btn btn-primary'>CreateMember</button></Link>
       <div className={styles.intro_flex_container}>
         {data.map((data) =>
           // 메인 html 필요할지도 
