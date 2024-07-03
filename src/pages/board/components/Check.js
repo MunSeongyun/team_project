@@ -49,6 +49,7 @@ const Check = () => {
         ))
         },[posts, post.id]
       )
+      console.log("object");
     
       // 페이지네이션 번호가 클릭되면 page를 그 번호로 바꾼다
     const onClick = (e) => {
